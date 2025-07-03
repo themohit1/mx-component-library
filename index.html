@@ -1,0 +1,3556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Components Showcase</title>
+    <link rel="stylesheet" href="mx/main.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <style>
+        .component-container {
+            margin-bottom: 3rem;
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        .component-preview {
+            padding: 2rem;
+            background-color: var(--background);
+        }
+        .component-code {
+            position: relative;
+            background-color: var(--muted);
+            border-top: 1px solid var(--border);
+        }
+        .code-toolbar {
+            position: relative;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .copy-btn svg {
+            width: 1rem;
+            height: 1rem;
+            flex-shrink: 0;
+        }
+        pre {
+            margin: 0;
+            padding: 1rem;
+            overflow-x: auto;
+        }
+        pre code {
+            font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body data-theme="light" class="main">
+    <div class="theme-toggle-container">
+        <button id="theme-toggle" class="btn btn-secondary btn-icon" aria-label="Toggle theme">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4.5">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M12 3l0 18"></path>
+                <path d="M12 9l4.65 -4.65"></path>
+                <path d="M12 14.3l7.37 -7.37"></path>
+                <path d="M12 19.6l8.85 -8.85"></path>
+            </svg>
+        </button>
+    </div>
+
+    <div class="container">
+        <h1 class="section-title">Button</h1>
+        <div class="btn-variants">
+            <!-- Primary Button -->
+            <div class="component-container">
+                <div class="component-preview">
+                    <button class="btn btn-primary">Button</button>
+                </div>
+                <div class="component-code">
+                    <button class="copy-btn btn btn-outline btn-sm">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span>Copy</span>
+                    </button>
+                    <div class="code-toolbar">
+                        <pre><code class="language-html">&lt;button class="btn btn-primary"&gt;Button&lt;/button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secondary Button -->
+            <div class="component-container">
+                <div class="component-preview">
+                    <button class="btn btn-secondary">Secondary</button>
+                </div>
+                <div class="component-code">
+                    <button class="copy-btn btn btn-outline btn-sm">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span>Copy</span>
+                    </button>
+                    <div class="code-toolbar">
+                        <pre><code class="language-html">&lt;button class="btn btn-secondary"&gt;Secondary&lt;/button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Destructive Button -->
+            <div class="component-container">
+                <div class="component-preview">
+                    <button class="btn btn-destructive">Destructive</button>
+                </div>
+                <div class="component-code">
+                    <button class="copy-btn btn btn-outline btn-sm">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span>Copy</span>
+                    </button>
+                    <div class="code-toolbar">
+                        <pre><code class="language-html">&lt;button class="btn btn-destructive"&gt;Destructive&lt;/button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outline Button -->
+            <div class="component-container">
+                <div class="component-preview">
+                    <button class="btn btn-outline">Outline</button>
+                </div>
+                <div class="component-code">
+                    <button class="copy-btn btn btn-outline btn-sm">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span>Copy</span>
+                    </button>
+                    <div class="code-toolbar">
+                        <pre><code class="language-html">&lt;button class="btn btn-outline"&gt;Outline&lt;/button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ghost Button -->
+            <div class="component-container">
+                <div class="component-preview">
+                    <button class="btn btn-ghost">Ghost</button>
+                </div>
+                <div class="component-code">
+                    <button class="copy-btn btn btn-outline btn-sm">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span>Copy</span>
+                    </button>
+                    <div class="code-toolbar">
+                        <pre><code class="language-html">&lt;button class="btn btn-ghost"&gt;Ghost&lt;/button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Link Button -->
+            <div class="component-container">
+                <div class="component-preview">
+                    <button class="btn btn-link">Link Style</button>
+                </div>
+                <div class="component-code">
+                    <button class="copy-btn btn btn-outline btn-sm">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span>Copy</span>
+                    </button>
+                    <div class="code-toolbar">
+                        <pre><code class="language-html">&lt;button class="btn btn-link"&gt;Link Style&lt;/button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Small Button -->
+            <div class="component-container">
+                <div class="component-preview">
+                    <button class="btn btn-primary btn-sm">Small</button>
+                </div>
+                <div class="component-code">
+                    <button class="copy-btn btn btn-outline btn-sm">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span>Copy</span>
+                    </button>
+                    <div class="code-toolbar">
+                        <pre><code class="language-html">&lt;button class="btn btn-primary btn-sm"&gt;Small&lt;/button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Large Button -->
+            <div class="component-container">
+                <div class="component-preview">
+                    <button class="btn btn-primary btn-lg">Large</button>
+                </div>
+                <div class="component-code">
+                    <button class="copy-btn btn btn-outline btn-sm">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span>Copy</span>
+                    </button>
+                    <div class="code-toolbar">
+                        <pre><code class="language-html">&lt;button class="btn btn-primary btn-lg"&gt;Large&lt;/button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Icon Button -->
+            <div class="component-container">
+                <div class="component-preview">
+                    <button class="btn btn-secondary btn-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+                <div class="component-code">
+                    <button class="copy-btn btn btn-outline btn-sm">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span>Copy</span>
+                    </button>
+                    <div class="code-toolbar">
+                        <pre><code class="language-html">&lt;button class="btn btn-secondary btn-icon"&gt;
+  &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;polyline points="9 18 15 12 9 6"&gt;&lt;/polyline&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button with Icon -->
+            <div class="component-container">
+                <div class="component-preview">
+                    <button class="btn btn-outline btn-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="6" y1="3" x2="6" y2="15"></line>
+                            <circle cx="18" cy="6" r="3"></circle>
+                            <circle cx="6" cy="18" r="3"></circle>
+                            <path d="M18 9a9 9 0 0 1-9 9"></path>
+                        </svg>
+                        New Branch
+                    </button>
+                </div>
+                <div class="component-code">
+                    <button class="copy-btn btn btn-outline btn-sm">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span>Copy</span>
+                    </button>
+                    <div class="code-toolbar">
+                        <pre><code class="language-html">&lt;button class="btn btn-outline btn-sm"&gt;
+  &lt;svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;line x1="6" y1="3" x2="6" y2="15"&gt;&lt;/line&gt;
+    &lt;circle cx="18" cy="6" r="3"&gt;&lt;/circle&gt;
+    &lt;circle cx="6" cy="18" r="3"&gt;&lt;/circle&gt;
+    &lt;path d="M18 9a9 9 0 0 1-9 9"&gt;&lt;/path&gt;
+  &lt;/svg&gt;
+  New Branch
+&lt;/button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading Button -->
+            <div class="component-container">
+                <div class="component-preview">
+                    <button class="btn btn-primary btn-sm" disabled>
+                        <svg class="animate-spin" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12a9 9 0 1 1-6.219-8.56"></path>
+                        </svg>
+                        Please wait
+                    </button>
+                </div>
+                <div class="component-code">
+                    <button class="copy-btn btn btn-outline btn-sm">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span>Copy</span>
+                    </button>
+                    <div class="code-toolbar">
+                        <pre><code class="language-html">&lt;button class="btn btn-primary btn-sm" disabled&gt;
+  &lt;svg class="animate-spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;path d="M21 12a9 9 0 1 1-6.219-8.56"&gt;&lt;/path&gt;
+  &lt;/svg&gt;
+  Please wait
+&lt;/button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="container">
+        <h1 class="section-title">Card</h1>
+        <div class="component-container">
+            <div class="component-preview">
+                <div class="card" style="max-width: 350px; margin: 0 auto;">
+                    <div class="card-header">
+                        <div class="card-title">Login to your account</div>
+                        <div class="card-description">Enter your email below to login to your account</div>
+                        <div class="card-action">
+                            <button class="btn btn-link" style="padding:0;min-width:unset;">Sign Up</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <form>
+                            <div style="display:flex;flex-direction:column;gap:1.5rem;">
+                                <div style="display:grid;gap:0.5rem;">
+                                    <label for="card-email" style="font-weight:500;">Email</label>
+                                    <input class="input" id="card-email" type="email" placeholder="m@example.com" required />
+                                </div>
+                                <div style="display:grid;gap:0.5rem;">
+                                    <div style="display:flex;align-items:center;">
+                                        <label for="card-password" style="font-weight:500;">Password</label>
+                                        <a href="#" style="margin-left:auto;font-size:0.875rem;text-underline-offset:4px;text-decoration:underline;">Forgot your password?</a>
+                                    </div>
+                                    <input class="input" id="card-password" type="password" required />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer" style="flex-direction:column;gap:0.5rem;">
+                        <button class="btn btn-primary" type="submit" style="width:100%;">Login</button>
+                        <button class="btn btn-outline" style="width:100%;">Login with Google</button>
+                    </div>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;div class="card" style="max-width: 350px;"&gt;
+  &lt;div class="card-header"&gt;
+    &lt;div class="card-title"&gt;Login to your account&lt;/div&gt;
+    &lt;div class="card-description"&gt;Enter your email below to login to your account&lt;/div&gt;
+    &lt;div class="card-action"&gt;
+      &lt;button class="btn btn-link" style="padding:0;min-width:unset;"&gt;Sign Up&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card-content"&gt;
+    &lt;form&gt;
+      &lt;div style="display:flex;flex-direction:column;gap:1.5rem;"&gt;
+        &lt;div style="display:grid;gap:0.5rem;"&gt;
+          &lt;label for="email" style="font-weight:500;"&gt;Email&lt;/label&gt;
+          &lt;input class="input" id="email" type="email" placeholder="m@example.com" required /&gt;
+        &lt;/div&gt;
+        &lt;div style="display:grid;gap:0.5rem;"&gt;
+          &lt;div style="display:flex;align-items:center;"&gt;
+            &lt;label for="password" style="font-weight:500;"&gt;Password&lt;/label&gt;
+            &lt;a href="#" style="margin-left:auto;font-size:0.875rem;text-underline-offset:4px;text-decoration:underline;"&gt;Forgot password?&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;input class="input" id="password" type="password" required /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+  &lt;div class="card-footer" style="flex-direction:column;gap:0.5rem;"&gt;
+    &lt;button class="btn btn-primary" type="submit" style="width:100%;"&gt;Login&lt;/button&gt;
+    &lt;button class="btn btn-outline" style="width:100%;"&gt;Login with Google&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="section-title">Input</h1>
+        
+        <!-- Default Input -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div style="max-width: 350px; margin: 0 auto;">
+                    <label for="username" style="display:block; margin-bottom:0.5rem; font-weight:500;">Username</label>
+                    <input class="input" id="username" placeholder="Enter your username" type="text" />
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;div&gt;
+  &lt;label for="username" style="display:block; margin-bottom:0.5rem; font-weight:500;"&gt;Username&lt;/label&gt;
+  &lt;input class="input" id="username" placeholder="Enter your username" type="text" /&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disabled Input -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div style="max-width: 350px; margin: 0 auto;">
+                    <label for="disabled-input" style="display:block; margin-bottom:0.5rem; font-weight:500;">Disabled</label>
+                    <input class="input" id="disabled-input" placeholder="Disabled input" type="text" disabled />
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;div&gt;
+  &lt;label for="disabled-input" style="display:block; margin-bottom:0.5rem; font-weight:500;"&gt;Disabled&lt;/label&gt;
+  &lt;input class="input" id="disabled-input" placeholder="Disabled input" type="text" disabled /&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input with Error -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div style="max-width: 350px; margin: 0 auto;">
+                    <label for="error-input" style="display:block; margin-bottom:0.5rem; font-weight:500;">Email</label>
+                    <input class="input input-error" id="error-input" placeholder="email@example.com" type="email" value="wrong.email@" />
+                    <p class="text-error" style="font-size: 0.875rem; margin-top: 0.5rem; color: var(--destructive, #dc2626);">Please enter a valid email address</p>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;div&gt;
+  &lt;label for="error-input" style="display:block; margin-bottom:0.5rem; font-weight:500;"&gt;Email&lt;/label&gt;
+  &lt;input class="input input-error" id="error-input" placeholder="email@example.com" type="email" value="wrong.email@" /&gt;
+  &lt;p class="text-error" style="font-size: 0.875rem; margin-top: 0.5rem; color: var(--destructive, #dc2626);"&gt;Please enter a valid email address&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="section-title">Select</h1>
+        
+        <!-- Default Select -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div style="max-width: 350px; margin: 0 auto;">
+                    <label for="fruit-select" style="display:block; margin-bottom:0.5rem; font-weight:500;">Fruits</label>
+                    <div class="select" tabindex="0">
+                        <button type="button" class="select-trigger" aria-haspopup="listbox" aria-expanded="false">
+                            <span class="select-value">Select a fruit</span>
+                            <span class="select-icon" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </span>
+                        </button>
+                        <div class="select-content" role="listbox">
+                            <div class="select-group">
+                                <div class="select-label">Fruits</div>
+                                <button type="button" class="select-item" role="option" data-value="apple">Apple</button>
+                                <button type="button" class="select-item" role="option" data-value="banana">Banana</button>
+                                <button type="button" class="select-item" role="option" data-value="blueberry">Blueberry</button>
+                                <button type="button" class="select-item" role="option" data-value="grapes">Grapes</button>
+                                <button type="button" class="select-item" role="option" data-value="pineapple">Pineapple</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;div class="select" tabindex="0"&gt;
+  &lt;button type="button" class="select-trigger" aria-haspopup="listbox" aria-expanded="false"&gt;
+    &lt;span class="select-value"&gt;Select a fruit&lt;/span&gt;
+    &lt;span class="select-icon" aria-hidden="true"&gt;
+      &lt;svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;polyline points="6 9 12 15 18 9"&gt;&lt;/polyline&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+  &lt;/button&gt;
+  &lt;div class="select-content" role="listbox"&gt;
+    &lt;div class="select-group"&gt;
+      &lt;div class="select-label"&gt;Fruits&lt;/div&gt;
+      &lt;button type="button" class="select-item" role="option" data-value="apple"&gt;Apple&lt;/button&gt;
+      &lt;button type="button" class="select-item" role="option" data-value="banana"&gt;Banana&lt;/button&gt;
+      &lt;button type="button" class="select-item" role="option" data-value="blueberry"&gt;Blueberry&lt;/button&gt;
+      &lt;button type="button" class="select-item" role="option" data-value="grapes"&gt;Grapes&lt;/button&gt;
+      &lt;button type="button" class="select-item" role="option" data-value="pineapple"&gt;Pineapple&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disabled Select -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div style="max-width: 350px; margin: 0 auto;">
+                    <label for="disabled-select" style="display:block; margin-bottom:0.5rem; font-weight:500;">Disabled Select</label>
+                    <div class="select" tabindex="0" disabled>
+                        <button type="button" class="select-trigger" aria-haspopup="listbox" aria-expanded="false" disabled>
+                            <span class="select-value">Select an option</span>
+                            <span class="select-icon" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;div class="select" tabindex="0" disabled&gt;
+  &lt;button type="button" class="select-trigger" aria-haspopup="listbox" aria-expanded="false" disabled&gt;
+    &lt;span class="select-value"&gt;Select an option&lt;/span&gt;
+    &lt;span class="select-icon" aria-hidden="true"&gt;
+      &lt;svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;polyline points="6 9 12 15 18 9"&gt;&lt;/polyline&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="section-title">Textarea</h1>
+        <div class="textarea-demo" style="max-width: 350px; margin: 2rem auto;">
+            <label for="message" style="display:block; margin-bottom:0.5rem; font-weight:500;">Message</label>
+            <textarea class="textarea" id="message" placeholder="Type your message here."></textarea>
+        </div>
+        <div class="textarea-demo" style="max-width: 350px; margin: 2rem auto;">
+            <label for="disabled-textarea" style="display:block; margin-bottom:0.5rem; font-weight:500;">Disabled</label>
+            <textarea class="textarea" id="disabled-textarea" placeholder="Disabled textarea" disabled></textarea>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="section-title">Toggle</h1>
+        
+        <!-- Default Toggle -->
+        <div class="component-container">
+            <div class="component-preview">
+                <button type="button" class="toggle" aria-pressed="false" aria-label="Toggle bold">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h9a4 4 0 0 1 0 8H6zm9 8a4 4 0 1 1 0 8H6v-8"></path></svg>
+                </button>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;button type="button" class="toggle" aria-pressed="false" aria-label="Toggle bold"&gt;
+  &lt;svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;path d="M6 4h9a4 4 0 0 1 0 8H6zm9 8a4 4 0 1 1 0 8H6v-8"&gt;&lt;/path&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Outline Toggle -->
+        <div class="component-container">
+            <div class="component-preview">
+                <button type="button" class="toggle toggle-outline" aria-pressed="false" aria-label="Toggle italic">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" x2="10" y1="4" y2="4"></line>
+                        <line x1="14" x2="5" y1="20" y2="20"></line>
+                        <line x1="15" x2="9" y1="4" y2="20"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;button type="button" class="toggle toggle-outline" aria-pressed="false" aria-label="Toggle italic"&gt;
+  &lt;svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;line x1="19" x2="10" y1="4" y2="4"&gt;&lt;/line&gt;
+    &lt;line x1="14" x2="5" y1="20" y2="20"&gt;&lt;/line&gt;
+    &lt;line x1="15" x2="9" y1="4" y2="20"&gt;&lt;/line&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toggle with Text -->
+        <div class="component-container">
+            <div class="component-preview">
+                <button type="button" class="toggle" aria-pressed="false" aria-label="Toggle italic">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" x2="10" y1="4" y2="4"></line>
+                        <line x1="14" x2="5" y1="20" y2="20"></line>
+                        <line x1="15" x2="9" y1="4" y2="20"></line>
+                    </svg>
+                    Italic
+                </button>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;button type="button" class="toggle" aria-pressed="false" aria-label="Toggle italic"&gt;
+  &lt;svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;line x1="19" x2="10" y1="4" y2="4"&gt;&lt;/line&gt;
+    &lt;line x1="14" x2="5" y1="20" y2="20"&gt;&lt;/line&gt;
+    &lt;line x1="15" x2="9" y1="4" y2="20"&gt;&lt;/line&gt;
+  &lt;/svg&gt;
+  Italic
+&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Small Toggle -->
+        <div class="component-container">
+            <div class="component-preview">
+                <button type="button" class="toggle toggle-sm" aria-pressed="false" aria-label="Toggle italic">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" x2="10" y1="4" y2="4"></line>
+                        <line x1="14" x2="5" y1="20" y2="20"></line>
+                        <line x1="15" x2="9" y1="4" y2="20"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;button type="button" class="toggle toggle-sm" aria-pressed="false" aria-label="Toggle italic"&gt;
+  &lt;svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;line x1="19" x2="10" y1="4" y2="4"&gt;&lt;/line&gt;
+    &lt;line x1="14" x2="5" y1="20" y2="20"&gt;&lt;/line&gt;
+    &lt;line x1="15" x2="9" y1="4" y2="20"&gt;&lt;/line&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Large Toggle -->
+        <div class="component-container">
+            <div class="component-preview">
+                <button type="button" class="toggle toggle-lg" aria-pressed="false" aria-label="Toggle italic">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" x2="10" y1="4" y2="4"></line>
+                        <line x1="14" x2="5" y1="20" y2="20"></line>
+                        <line x1="15" x2="9" y1="4" y2="20"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;button type="button" class="toggle toggle-lg" aria-pressed="false" aria-label="Toggle italic"&gt;
+  &lt;svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;line x1="19" x2="10" y1="4" y2="4"&gt;&lt;/line&gt;
+    &lt;line x1="14" x2="5" y1="20" y2="20"&gt;&lt;/line&gt;
+    &lt;line x1="15" x2="9" y1="4" y2="20"&gt;&lt;/line&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disabled Toggle -->
+        <div class="component-container">
+            <div class="component-preview">
+                <button type="button" class="toggle" aria-pressed="false" aria-label="Toggle underline" disabled>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 4v6a6 6 0 0 0 12 0V4"></path>
+                        <line x1="4" x2="20" y1="20" y2="20"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;button type="button" class="toggle" aria-pressed="false" aria-label="Toggle underline" disabled&gt;
+  &lt;svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;path d="M6 4v6a6 6 0 0 0 12 0V4"&gt;&lt;/path&gt;
+    &lt;line x1="4" x2="20" y1="20" y2="20"&gt;&lt;/line&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="section-title">Toggle Group</h1>
+        
+        <!-- Default Toggle Group -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div class="toggle-group" data-type="multiple">
+                    <button type="button" class="toggle" aria-pressed="false" aria-label="Toggle bold">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h9a4 4 0 0 1 0 8H6zm9 8a4 4 0 1 1 0 8H6v-8"></path></svg>
+                    </button>
+                    <button type="button" class="toggle" aria-pressed="false" aria-label="Toggle italic">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" x2="10" y1="4" y2="4"></line><line x1="14" x2="5" y1="20" y2="20"></line><line x1="15" x2="9" y1="4" y2="20"></line></svg>
+                    </button>
+                    <button type="button" class="toggle" aria-pressed="false" aria-label="Toggle underline">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4v6a6 6 0 0 0 12 0V4"></path><line x1="4" x2="20" y1="20" y2="20"></line></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;div class="toggle-group" data-type="multiple"&gt;
+  &lt;button type="button" class="toggle" aria-pressed="false" aria-label="Toggle bold"&gt;
+    &lt;svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M6 4h9a4 4 0 0 1 0 8H6zm9 8a4 4 0 1 1 0 8H6v-8"&gt;&lt;/path&gt;&lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button type="button" class="toggle" aria-pressed="false" aria-label="Toggle italic"&gt;
+    &lt;svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;line x1="19" x2="10" y1="4" y2="4"&gt;&lt;/line&gt;&lt;line x1="14" x2="5" y1="20" y2="20"&gt;&lt;/line&gt;&lt;line x1="15" x2="9" y1="4" y2="20"&gt;&lt;/line&gt;&lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button type="button" class="toggle" aria-pressed="false" aria-label="Toggle underline"&gt;
+    &lt;svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M6 4v6a6 6 0 0 0 12 0V4"&gt;&lt;/path&gt;&lt;line x1="4" x2="20" y1="20" y2="20"&gt;&lt;/line&gt;&lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Outline Toggle Group -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div class="toggle-group" data-type="multiple">
+                    <button type="button" class="toggle toggle-outline" aria-pressed="false" aria-label="Toggle bold">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h9a4 4 0 0 1 0 8H6zm9 8a4 4 0 1 1 0 8H6v-8"></path></svg>
+                    </button>
+                    <button type="button" class="toggle toggle-outline" aria-pressed="false" aria-label="Toggle italic">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" x2="10" y1="4" y2="4"></line><line x1="14" x2="5" y1="20" y2="20"></line><line x1="15" x2="9" y1="4" y2="20"></line></svg>
+                    </button>
+                    <button type="button" class="toggle toggle-outline" aria-pressed="false" aria-label="Toggle underline">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4v6a6 6 0 0 0 12 0V4"></path><line x1="4" x2="20" y1="20" y2="20"></line></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;div class="toggle-group" data-type="multiple"&gt;
+  &lt;button type="button" class="toggle toggle-outline" aria-pressed="false" aria-label="Toggle bold"&gt;
+    &lt;svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M6 4h9a4 4 0 0 1 0 8H6zm9 8a4 4 0 1 1 0 8H6v-8"&gt;&lt;/path&gt;&lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button type="button" class="toggle toggle-outline" aria-pressed="false" aria-label="Toggle italic"&gt;
+    &lt;svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;line x1="19" x2="10" y1="4" y2="4"&gt;&lt;/line&gt;&lt;line x1="14" x2="5" y1="20" y2="20"&gt;&lt;/line&gt;&lt;line x1="15" x2="9" y1="4" y2="20"&gt;&lt;/line&gt;&lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button type="button" class="toggle toggle-outline" aria-pressed="false" aria-label="Toggle underline"&gt;
+    &lt;svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M6 4v6a6 6 0 0 0 12 0V4"&gt;&lt;/path&gt;&lt;line x1="4" x2="20" y1="20" y2="20"&gt;&lt;/line&gt;&lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- Single Select Toggle Group -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div class="toggle-group" data-type="single">
+                    <button type="button" class="toggle" aria-pressed="false" aria-label="Toggle bold">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h9a4 4 0 0 1 0 8H6zm9 8a4 4 0 1 1 0 8H6v-8"></path></svg>
+                    </button>
+                    <button type="button" class="toggle" aria-pressed="false" aria-label="Toggle italic">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" x2="10" y1="4" y2="4"></line><line x1="14" x2="5" y1="20" y2="20"></line><line x1="15" x2="9" y1="4" y2="20"></line></svg>
+                    </button>
+                    <button type="button" class="toggle" aria-pressed="false" aria-label="Toggle underline">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4v6a6 6 0 0 0 12 0V4"></path><line x1="4" x2="20" y1="20" y2="20"></line></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;div class="toggle-group" data-type="single"&gt;
+  &lt;button type="button" class="toggle" aria-pressed="false" aria-label="Toggle bold"&gt;
+    &lt;svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M6 4h9a4 4 0 0 1 0 8H6zm9 8a4 4 0 1 1 0 8H6v-8"&gt;&lt;/path&gt;&lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button type="button" class="toggle" aria-pressed="false" aria-label="Toggle italic"&gt;
+    &lt;svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;line x1="19" x2="10" y1="4" y2="4"&gt;&lt;/line&gt;&lt;line x1="14" x2="5" y1="20" y2="20"&gt;&lt;/line&gt;&lt;line x1="15" x2="9" y1="4" y2="20"&gt;&lt;/line&gt;&lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button type="button" class="toggle" aria-pressed="false" aria-label="Toggle underline"&gt;
+    &lt;svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M6 4v6a6 6 0 0 0 12 0V4"&gt;&lt;/path&gt;&lt;line x1="4" x2="20" y1="20" y2="20"&gt;&lt;/line&gt;&lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- Small Toggle Group -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div class="toggle-group" data-type="multiple">
+                    <button type="button" class="toggle toggle-sm" aria-pressed="false" aria-label="Toggle bold">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h9a4 4 0 0 1 0 8H6zm9 8a4 4 0 1 1 0 8H6v-8"></path></svg>
+                    </button>
+                    <button type="button" class="toggle toggle-sm" aria-pressed="false" aria-label="Toggle italic">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" x2="10" y1="4" y2="4"></line><line x1="14" x2="5" y1="20" y2="20"></line><line x1="15" x2="9" y1="4" y2="20"></line></svg>
+                    </button>
+                    <button type="button" class="toggle toggle-sm" aria-pressed="false" aria-label="Toggle underline">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4v6a6 6 0 0 0 12 0V4"></path><line x1="4" x2="20" y1="20" y2="20"></line></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;div class="toggle-group" data-type="multiple"&gt;
+  &lt;button type="button" class="toggle toggle-sm" aria-pressed="false" aria-label="Toggle bold"&gt;
+    &lt;svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M6 4h9a4 4 0 0 1 0 8H6zm9 8a4 4 0 1 1 0 8H6v-8"&gt;&lt;/path&gt;&lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button type="button" class="toggle toggle-sm" aria-pressed="false" aria-label="Toggle italic"&gt;
+    &lt;svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;line x1="19" x2="10" y1="4" y2="4"&gt;&lt;/line&gt;&lt;line x1="14" x2="5" y1="20" y2="20"&gt;&lt;/line&gt;&lt;line x1="15" x2="9" y1="4" y2="20"&gt;&lt;/line&gt;&lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button type="button" class="toggle toggle-sm" aria-pressed="false" aria-label="Toggle underline"&gt;
+    &lt;svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M6 4v6a6 6 0 0 0 12 0V4"&gt;&lt;/path&gt;&lt;line x1="4" x2="20" y1="20" y2="20"&gt;&lt;/line&gt;&lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- Large Toggle Group -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div class="toggle-group" data-type="multiple">
+                    <button type="button" class="toggle toggle-lg" aria-pressed="false" aria-label="Toggle bold">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h9a4 4 0 0 1 0 8H6zm9 8a4 4 0 1 1 0 8H6v-8"></path></svg>
+                    </button>
+                    <button type="button" class="toggle toggle-lg" aria-pressed="false" aria-label="Toggle italic">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" x2="10" y1="4" y2="4"></line><line x1="14" x2="5" y1="20" y2="20"></line><line x1="15" x2="9" y1="4" y2="20"></line></svg>
+                    </button>
+                    <button type="button" class="toggle toggle-lg" aria-pressed="false" aria-label="Toggle underline">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4v6a6 6 0 0 0 12 0V4"></path><line x1="4" x2="20" y1="20" y2="20"></line></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;div class="toggle-group" data-type="multiple"&gt;
+  &lt;button type="button" class="toggle toggle-lg" aria-pressed="false" aria-label="Toggle bold"&gt;
+    &lt;svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M6 4h9a4 4 0 0 1 0 8H6zm9 8a4 4 0 1 1 0 8H6v-8"&gt;&lt;/path&gt;&lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button type="button" class="toggle toggle-lg" aria-pressed="false" aria-label="Toggle italic"&gt;
+    &lt;svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;line x1="19" x2="10" y1="4" y2="4"&gt;&lt;/line&gt;&lt;line x1="14" x2="5" y1="20" y2="20"&gt;&lt;/line&gt;&lt;line x1="15" x2="9" y1="4" y2="20"&gt;&lt;/line&gt;&lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button type="button" class="toggle toggle-lg" aria-pressed="false" aria-label="Toggle underline"&gt;
+    &lt;svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M6 4v6a6 6 0 0 0 12 0V4"&gt;&lt;/path&gt;&lt;line x1="4" x2="20" y1="20" y2="20"&gt;&lt;/line&gt;&lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- Disabled Toggle Group -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div class="toggle-group" data-type="multiple" disabled>
+                    <button type="button" class="toggle" aria-pressed="false" aria-label="Toggle bold">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h9a4 4 0 0 1 0 8H6zm9 8a4 4 0 1 1 0 8H6v-8"></path></svg>
+                    </button>
+                    <button type="button" class="toggle" aria-pressed="false" aria-label="Toggle italic">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" x2="10" y1="4" y2="4"></line><line x1="14" x2="5" y1="20" y2="20"></line><line x1="15" x2="9" y1="4" y2="20"></line></svg>
+                    </button>
+                    <button type="button" class="toggle" aria-pressed="false" aria-label="Toggle underline">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4v6a6 6 0 0 0 12 0V4"></path><line x1="4" x2="20" y1="20" y2="20"></line></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;div class="toggle-group" data-type="multiple" disabled&gt;
+  &lt;button type="button" class="toggle" aria-pressed="false" aria-label="Toggle bold"&gt;
+    &lt;svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M6 4h9a4 4 0 0 1 0 8H6zm9 8a4 4 0 1 1 0 8H6v-8"&gt;&lt;/path&gt;&lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button type="button" class="toggle" aria-pressed="false" aria-label="Toggle italic"&gt;
+    &lt;svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;line x1="19" x2="10" y1="4" y2="4"&gt;&lt;/line&gt;&lt;line x1="14" x2="5" y1="20" y2="20"&gt;&lt;/line&gt;&lt;line x1="15" x2="9" y1="4" y2="20"&gt;&lt;/line&gt;&lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button type="button" class="toggle" aria-pressed="false" aria-label="Toggle underline"&gt;
+    &lt;svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M6 4v6a6 6 0 0 0 12 0V4"&gt;&lt;/path&gt;&lt;line x1="4" x2="20" y1="20" y2="20"&gt;&lt;/line&gt;&lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="section-title">Accordion</h1>
+        <div class="component-container">
+            <div class="component-preview">
+                <div class="accordion" data-type="single" data-collapsible style="max-width: 600px; margin: 0 auto;">
+                    <div class="accordion-item open">
+                        <button type="button" class="accordion-trigger">
+                            Product Information
+                            <span class="accordion-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Our flagship product combines cutting-edge technology with sleek design. Built with premium materials, it offers unparalleled performance and reliability.</p>
+                            <p>Key features include advanced processing capabilities, and an intuitive user interface designed for both beginners and experts.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button type="button" class="accordion-trigger">
+                            Shipping Details
+                            <span class="accordion-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>We offer worldwide shipping through trusted courier partners. Standard delivery takes 3-5 business days, while express shipping ensures delivery within 1-2 business days.</p>
+                            <p>All orders are carefully packaged and fully insured. Track your shipment in real-time through our dedicated tracking portal.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button type="button" class="accordion-trigger">
+                            Return Policy
+                            <span class="accordion-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>We stand behind our products with a comprehensive 30-day return policy. If you're not completely satisfied, simply return the item in its original condition.</p>
+                            <p>Our hassle-free return process includes free return shipping and full refunds processed within 48 hours of receiving the returned item.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;div class="accordion" data-type="single" data-collapsible&gt;
+  &lt;div class="accordion-item open"&gt;
+    &lt;button type="button" class="accordion-trigger"&gt;
+      Product Information
+      &lt;span class="accordion-icon" aria-hidden="true"&gt;
+        &lt;svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;polyline points="6 9 12 15 18 9"&gt;&lt;/polyline&gt;&lt;/svg&gt;
+      &lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class="accordion-content"&gt;
+      &lt;p&gt;Our flagship product combines cutting-edge technology with sleek design. Built with premium materials, it offers unparalleled performance and reliability.&lt;/p&gt;
+      &lt;p&gt;Key features include advanced processing capabilities, and an intuitive user interface designed for both beginners and experts.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="accordion-item"&gt;
+    &lt;button type="button" class="accordion-trigger"&gt;
+      Shipping Details
+      &lt;span class="accordion-icon" aria-hidden="true"&gt;
+        &lt;svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;polyline points="6 9 12 15 18 9"&gt;&lt;/polyline&gt;&lt;/svg&gt;
+      &lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class="accordion-content"&gt;
+      &lt;p&gt;We offer worldwide shipping through trusted courier partners. Standard delivery takes 3-5 business days, while express shipping ensures delivery within 1-2 business days.&lt;/p&gt;
+      &lt;p&gt;All orders are carefully packaged and fully insured. Track your shipment in real-time through our dedicated tracking portal.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="accordion-item"&gt;
+    &lt;button type="button" class="accordion-trigger"&gt;
+      Return Policy
+      &lt;span class="accordion-icon" aria-hidden="true"&gt;
+        &lt;svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;polyline points="6 9 12 15 18 9"&gt;&lt;/polyline&gt;&lt;/svg&gt;
+      &lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class="accordion-content"&gt;
+      &lt;p&gt;We stand behind our products with a comprehensive 30-day return policy. If you're not completely satisfied, simply return the item in its original condition.&lt;/p&gt;
+      &lt;p&gt;Our hassle-free return process includes free return shipping and full refunds processed within 48 hours of receiving the returned item.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+    <div class="container">
+        <h1 class="section-title">Alert</h1>
+        
+        <!-- Success Alert -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div class="alert">
+                    <span class="alert-icon" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+                    </span>
+                    <div>
+                        <div class="alert-title">Success! Your changes have been saved</div>
+                        <div class="alert-description">This is an alert with icon, title and description.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;div class="alert"&gt;
+  &lt;span class="alert-icon" aria-hidden="true"&gt;
+    &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+      &lt;circle cx="12" cy="12" r="10"&gt;&lt;/circle&gt;
+      &lt;path d="m9 12 2 2 4-4"&gt;&lt;/path&gt;
+    &lt;/svg&gt;
+  &lt;/span&gt;
+  &lt;div&gt;
+    &lt;div class="alert-title"&gt;Success! Your changes have been saved&lt;/div&gt;
+    &lt;div class="alert-description"&gt;This is an alert with icon, title and description.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info Alert -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div class="alert">
+                    <span class="alert-icon" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20a6 6 0 0 1-12 0"></path><path d="M6 20V10m12 10V10"></path><path d="M4 10V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2"></path><path d="m9 2 1 2"></path><path d="m15 2-1 2"></path><path d="M12 4v2"></path></svg>
+                    </span>
+                    <div>
+                        <div class="alert-title">This Alert has a title and an icon. No description.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;div class="alert"&gt;
+  &lt;span class="alert-icon" aria-hidden="true"&gt;
+    &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+      &lt;path d="M18 20a6 6 0 0 1-12 0"&gt;&lt;/path&gt;
+      &lt;path d="M6 20V10m12 10V10"&gt;&lt;/path&gt;
+      &lt;path d="M4 10V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2"&gt;&lt;/path&gt;
+      &lt;path d="m9 2 1 2"&gt;&lt;/path&gt;
+      &lt;path d="m15 2-1 2"&gt;&lt;/path&gt;
+      &lt;path d="M12 4v2"&gt;&lt;/path&gt;
+    &lt;/svg&gt;
+  &lt;/span&gt;
+  &lt;div&gt;
+    &lt;div class="alert-title"&gt;This Alert has a title and an icon. No description.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Destructive Alert -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div class="alert alert-destructive">
+                    <span class="alert-icon" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+                    </span>
+                    <div>
+                        <div class="alert-title">Unable to process your payment.</div>
+                        <div class="alert-description">
+                            <p>Please verify your billing information and try again.</p>
+                            <ul style="margin: 0.5em 0 0 1.2em; padding: 0; list-style: disc inside; font-size: 0.96em; color: var(--muted-foreground, #71717a);">
+                                <li>Check your card details</li>
+                                <li>Ensure sufficient funds</li>
+                                <li>Verify billing address</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;div class="alert alert-destructive"&gt;
+  &lt;span class="alert-icon" aria-hidden="true"&gt;
+    &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+      &lt;circle cx="12" cy="12" r="10"&gt;&lt;/circle&gt;
+      &lt;line x1="12" x2="12" y1="8" y2="12"&gt;&lt;/line&gt;
+      &lt;line x1="12" x2="12.01" y1="16" y2="16"&gt;&lt;/line&gt;
+    &lt;/svg&gt;
+  &lt;/span&gt;
+  &lt;div&gt;
+    &lt;div class="alert-title"&gt;Unable to process your payment.&lt;/div&gt;
+    &lt;div class="alert-description"&gt;
+      &lt;p&gt;Please verify your billing information and try again.&lt;/p&gt;
+      &lt;ul style="margin: 0.5em 0 0 1.2em; padding: 0; list-style: disc inside; font-size: 0.96em; color: var(--muted-foreground, #71717a);"&gt;
+        &lt;li&gt;Check your card details&lt;/li&gt;
+        &lt;li&gt;Ensure sufficient funds&lt;/li&gt;
+        &lt;li&gt;Verify billing address&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="section-title">Alert Dialog</h1>
+        
+        <div class="component-container">
+            <div class="component-preview">
+                <button class="btn btn-outline alert-dialog-trigger" data-target="alert-dialog-demo" type="button">Show Dialog</button>
+                <div id="alert-dialog-demo" class="alert-dialog" role="alertdialog" aria-modal="true" aria-labelledby="alert-dialog-title" aria-describedby="alert-dialog-desc" tabindex="-1">
+                    <div class="alert-dialog-backdrop"></div>
+                    <div class="alert-dialog-content">
+                        <div class="alert-dialog-header">
+                            <div class="alert-dialog-title" id="alert-dialog-title">Are you absolutely sure?</div>
+                            <div class="alert-dialog-description" id="alert-dialog-desc">
+                                This action cannot be undone. This will permanently delete your account and remove your data from our servers.
+                            </div>
+                        </div>
+                        <div class="alert-dialog-footer">
+                            <button class="btn btn-secondary alert-dialog-cancel" type="button">Cancel</button>
+                            <button class="btn btn-destructive alert-dialog-action" type="button">Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Trigger Button --&gt;
+&lt;button class="btn btn-outline alert-dialog-trigger" data-target="alert-dialog-demo" type="button"&gt;
+  Show Dialog
+&lt;/button&gt;
+
+&lt;!-- Alert Dialog --&gt;
+&lt;div id="alert-dialog-demo" class="alert-dialog" role="alertdialog" aria-modal="true" 
+     aria-labelledby="alert-dialog-title" aria-describedby="alert-dialog-desc" tabindex="-1"&gt;
+  &lt;div class="alert-dialog-backdrop"&gt;&lt;/div&gt;
+  &lt;div class="alert-dialog-content"&gt;
+    &lt;div class="alert-dialog-header"&gt;
+      &lt;div class="alert-dialog-title" id="alert-dialog-title"&gt;Are you absolutely sure?&lt;/div&gt;
+      &lt;div class="alert-dialog-description" id="alert-dialog-desc"&gt;
+        This action cannot be undone. This will permanently delete your account and remove your data from our servers.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="alert-dialog-footer"&gt;
+      &lt;button class="btn btn-secondary alert-dialog-cancel" type="button"&gt;Cancel&lt;/button&gt;
+      &lt;button class="btn btn-destructive alert-dialog-action" type="button"&gt;Continue&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- JavaScript to initialize --&gt;
+&lt;script&gt;
+  document.querySelector('.alert-dialog-trigger').addEventListener('click', function() {
+    const dialog = document.getElementById('alert-dialog-demo');
+    dialog.style.display = 'block';
+    dialog.focus();
+    
+    // Close when clicking outside or pressing Escape
+    const closeDialog = () => {
+      dialog.style.display = 'none';
+    };
+    
+    dialog.querySelector('.alert-dialog-backdrop').addEventListener('click', closeDialog);
+    dialog.querySelector('.alert-dialog-cancel').addEventListener('click', closeDialog);
+    
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeDialog();
+      }
+    });
+  });
+&lt;/script&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="section-title">Aspect Ratio</h1>
+        
+        <div class="component-container">
+            <div class="component-preview">
+                <div class="aspect-ratio" data-ratio="16/9" style="max-width: 600px; margin: 0 auto; border-radius: 0.75rem; background: var(--muted, #f4f4f5);">
+                    <div class="aspect-ratio-inner"></div>
+                    <img src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80" alt="Photo by Drew Beamer" style="border-radius: 0.75rem; object-fit: cover; filter: brightness(1) grayscale(0);" />
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- 16:9 Aspect Ratio Container --&gt;
+&lt;div class="aspect-ratio" data-ratio="16/9" style="border-radius: 0.75rem; background: var(--muted, #f4f4f5);"&gt;
+  &lt;div class="aspect-ratio-inner"&gt;&lt;/div&gt;
+  &lt;img 
+    src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80" 
+    alt="Photo by Drew Beamer" 
+    style="border-radius: 0.75rem; object-fit: cover;"
+  /&gt;
+&lt;/div&gt;
+
+&lt;!-- Example with different ratios --&gt;
+&lt;div class="aspect-ratio" data-ratio="4/3"&gt;
+  &lt;div class="aspect-ratio-inner"&gt;&lt;/div&gt;
+  &lt;!-- Your content here --&gt;
+&lt;/div&gt;
+
+&lt;div class="aspect-ratio" data-ratio="1/1"&gt;
+  &lt;div class="aspect-ratio-inner"&gt;&lt;/div&gt;
+  &lt;!-- Your content here --&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+.aspect-ratio {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.aspect-ratio-inner {
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: calc(100% / (var(--aspect-ratio)));
+}
+
+.aspect-ratio > :not(.aspect-ratio-inner) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* JavaScript to handle data-ratio attribute */
+&lt;/style&gt;
+
+&lt;script&gt;
+document.querySelectorAll('.aspect-ratio').forEach(el => {
+  if (el.dataset.ratio) {
+    const [w, h] = el.dataset.ratio.split('/').map(Number);
+    el.style.setProperty('--aspect-ratio', w / h);
+  }
+});
+&lt;/script&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="section-title">Avatar</h1>
+        
+        <!-- Round Avatar -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem;">
+                    <span class="avatar">
+                        <img src="https://github.com/shadcn.png" alt="@shadcn" onerror="this.style.display='none';this.parentNode.querySelector('.avatar-fallback').style.display='flex';">
+                        <span class="avatar-fallback" style="display:none;">CN</span>
+                    </span>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Default Round Avatar --&gt;
+&lt;span class="avatar"&gt;
+  &lt;img 
+    src="https://github.com/username.png" 
+    alt="@username"
+    onerror="this.style.display='none';this.parentNode.querySelector('.avatar-fallback').style.display='flex';"
+  &gt;
+  &lt;span class="avatar-fallback"&gt;US&lt;/span&gt;
+&lt;/span&gt;
+
+&lt;style&gt;
+.avatar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background-color: var(--muted, #f4f4f5);
+  overflow: hidden;
+  user-select: none;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.avatar-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: var(--muted-foreground, #71717a);
+}
+&lt;/style&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rounded-lg Avatar -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem;">
+                    <span class="avatar rounded-lg">
+                        <img src="https://github.com/evilrabbit.png" alt="@evilrabbit" onerror="this.style.display='none';this.parentNode.querySelector('.avatar-fallback').style.display='flex';">
+                        <span class="avatar-fallback" style="display:none;">ER</span>
+                    </span>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Square Avatar with Rounded Corners --&gt;
+&lt;span class="avatar rounded-lg"&gt;
+  &lt;img 
+    src="https://github.com/username.png" 
+    alt="@username"
+    onerror="this.style.display='none';this.parentNode.querySelector('.avatar-fallback').style.display='flex';"
+  &gt;
+  &lt;span class="avatar-fallback"&gt;US&lt;/span&gt;
+&lt;/span&gt;
+
+&lt;style&gt;
+.rounded-lg {
+  border-radius: 0.5rem !important;
+}
+&lt;/style&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Avatar Group -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem;">
+                    <span class="avatar-group">
+                        <span class="avatar">
+                            <img src="https://github.com/shadcn.png" alt="@shadcn" onerror="this.style.display='none';this.parentNode.querySelector('.avatar-fallback').style.display='flex';">
+                            <span class="avatar-fallback" style="display:none;">CN</span>
+                        </span>
+                        <span class="avatar">
+                            <img src="https://github.com/leerob.png" alt="@leerob" onerror="this.style.display='none';this.parentNode.querySelector('.avatar-fallback').style.display='flex';">
+                            <span class="avatar-fallback" style="display:none;">LR</span>
+                        </span>
+                        <span class="avatar">
+                            <img src="https://github.com/evilrabbit.png" alt="@evilrabbit" onerror="this.style.display='none';this.parentNode.querySelector('.avatar-fallback').style.display='flex';">
+                            <span class="avatar-fallback" style="display:none;">ER</span>
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Avatar Group --&gt;
+&lt;span class="avatar-group"&gt;
+  &lt;span class="avatar"&gt;
+    &lt;img 
+      src="https://github.com/user1.png" 
+      alt="@user1"
+      onerror="this.style.display='none';this.parentNode.querySelector('.avatar-fallback').style.display='flex';"
+    &gt;
+    &lt;span class="avatar-fallback"&gt;U1&lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span class="avatar"&gt;
+    &lt;img 
+      src="https://github.com/user2.png" 
+      alt="@user2"
+      onerror="this.style.display='none';this.parentNode.querySelector('.avatar-fallback').style.display='flex';"
+    &gt;
+    &lt;span class="avatar-fallback"&gt;U2&lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span class="avatar"&gt;
+    &lt;img 
+      src="https://github.com/user3.png" 
+      alt="@user3"
+      onerror="this.style.display='none';this.parentNode.querySelector('.avatar-fallback').style.display='flex';"
+    &gt;
+    &lt;span class="avatar-fallback"&gt;U3&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/span&gt;
+
+&lt;style&gt;
+.avatar-group {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-left: 0.75rem;
+}
+
+.avatar-group .avatar {
+  margin-left: -0.75rem;
+  border: 2px solid var(--background, #ffffff);
+  transition: transform 0.2s ease-in-out;
+}
+
+.avatar-group .avatar:hover {
+  transform: translateY(-0.25rem);
+  z-index: 1;
+}
+&lt;/style&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="section-title">Badge</h1>
+        
+        <!-- Default Badge -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem;">
+                    <span class="badge">Badge</span>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Default Badge --&gt;
+&lt;span class="badge"&gt;Badge&lt;/span&gt;
+
+&lt;style&gt;
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  background-color: var(--primary, #3b82f6);
+  color: var(--primary-foreground, #ffffff);
+  transition: opacity 0.2s, background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.badge:focus-visible {
+  outline: 2px solid var(--ring, #93c5fd);
+  outline-offset: 2px;
+}
+&lt;/style&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Badge Variants -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem;">
+                    <span class="badge">Default</span>
+                    <span class="badge badge-secondary">Secondary</span>
+                    <span class="badge badge-destructive">Destructive</span>
+                    <span class="badge badge-outline">Outline</span>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Badge Variants --&gt;
+&lt;span class="badge"&gt;Default&lt;/span&gt;
+&lt;span class="badge badge-secondary"&gt;Secondary&lt;/span&gt;
+&lt;span class="badge badge-destructive"&gt;Destructive&lt;/span&gt;
+&lt;span class="badge badge-outline"&gt;Outline&lt;/span&gt;
+
+&lt;style&gt;
+.badge-secondary {
+  background-color: var(--secondary, #f4f4f5);
+  color: var(--secondary-foreground, #18181b);
+}
+
+.badge-destructive {
+  background-color: var(--destructive, #ef4444);
+  color: var(--destructive-foreground, #fafafa);
+}
+
+.badge-outline {
+  background-color: transparent;
+  border: 1px solid var(--border, #e4e4e7);
+  color: var(--foreground, #18181b);
+}
+&lt;/style&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Badge with Icon -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem;">
+                    <span class="badge badge-secondary bg-blue">
+                        <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.25em;">
+                            <path d="M9 12l2 2 4-4"></path>
+                            <circle cx="12" cy="12" r="10"></circle>
+                        </svg>
+                        Verified
+                    </span>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Badge with Icon --&gt;
+&lt;span class="badge badge-secondary bg-blue"&gt;
+  &lt;svg 
+    width="1em" 
+    height="1em" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    stroke-width="2" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+    style="margin-right:0.25em;"
+  &gt;
+    &lt;path d="M9 12l2 2 4-4"&gt;&lt;/path&gt;
+    &lt;circle cx="12" cy="12" r="10"&gt;&lt;/circle&gt;
+  &lt;/svg&gt;
+  Verified
+&lt;/span&gt;
+
+&lt;style&gt;
+.badge svg {
+  margin-right: 0.25em;
+}
+
+.badge.bg-blue {
+  background-color: var(--blue-500, #3b82f6);
+  color: white;
+}
+&lt;/style&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Badge with Counter -->
+        <div class="component-container">
+            <div class="component-preview">
+                <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem;">
+                    <span class="badge rounded-full font-mono">8</span>
+                    <span class="badge badge-destructive rounded-full font-mono">99</span>
+                    <span class="badge badge-outline rounded-full font-mono">20+</span>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Badge with Counter --&gt;
+&lt;span class="badge rounded-full font-mono"&gt;8&lt;/span&gt;
+&lt;span class="badge badge-destructive rounded-full font-mono"&gt;99&lt;/span&gt;
+&lt;span class="badge badge-outline rounded-full font-mono"&gt;20+&lt;/span&gt;
+
+&lt;style&gt;
+.rounded-full {
+  border-radius: 9999px !important;
+  padding: 0.15rem 0.5rem !important;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+&lt;/style&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="section-title">Breadcrumb</h1>
+        
+        <div class="component-container">
+            <div class="component-preview">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <ol class="breadcrumb-list">
+                        <li class="breadcrumb-item">
+                            <a href="/" class="breadcrumb-link">Home</a>
+                        </li>
+                        <li class="breadcrumb-separator" aria-hidden="true">/</li>
+                        <li class="breadcrumb-item breadcrumb-dropdown-container">
+                            <button type="button" class="breadcrumb-ellipsis" aria-label="Toggle menu" tabindex="0">⋯</button>
+                            <div class="breadcrumb-dropdown" role="menu">
+                                <button class="breadcrumb-dropdown-item" role="menuitem">Documentation</button>
+                                <button class="breadcrumb-dropdown-item" role="menuitem">Themes</button>
+                                <button class="breadcrumb-dropdown-item" role="menuitem">GitHub</button>
+                            </div>
+                        </li>
+                        <li class="breadcrumb-separator" aria-hidden="true">/</li>
+                        <li class="breadcrumb-item">
+                            <a href="/docs/components" class="breadcrumb-link">Components</a>
+                        </li>
+                        <li class="breadcrumb-separator" aria-hidden="true">/</li>
+                        <li class="breadcrumb-item">
+                            <span class="breadcrumb-page" aria-current="page">Breadcrumb</span>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Breadcrumb Navigation --&gt;
+&lt;nav class="breadcrumb" aria-label="Breadcrumb"&gt;
+  &lt;ol class="breadcrumb-list"&gt;
+    &lt;li class="breadcrumb-item"&gt;
+      &lt;a href="/" class="breadcrumb-link"&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="breadcrumb-separator" aria-hidden="true"&gt;/&lt;/li&gt;
+    &lt;li class="breadcrumb-item"&gt;
+      &lt;button type="button" class="breadcrumb-ellipsis" aria-label="Toggle menu"&gt;⋯&lt;/button&gt;
+      &lt;div class="breadcrumb-dropdown" role="menu"&gt;
+        &lt;button class="breadcrumb-dropdown-item" role="menuitem"&gt;Documentation&lt;/button&gt;
+        &lt;button class="breadcrumb-dropdown-item" role="menuitem"&gt;Themes&lt;/button&gt;
+        &lt;button class="breadcrumb-dropdown-item" role="menuitem"&gt;GitHub&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class="breadcrumb-separator" aria-hidden="true"&gt;/&lt;/li&gt;
+    &lt;li class="breadcrumb-item"&gt;
+      &lt;a href="/docs/components" class="breadcrumb-link"&gt;Components&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="breadcrumb-separator" aria-hidden="true"&gt;/&lt;/li&gt;
+    &lt;li class="breadcrumb-item"&gt;
+      &lt;span class="breadcrumb-page" aria-current="page"&gt;Breadcrumb&lt;/span&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;
+
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1 class="section-title">Checkbox</h1>
+        
+        <!-- Checkbox with Description -->
+        <div class="component-container">
+            <div class="component-preview">
+                <label class="checkbox-container">
+                    <input type="checkbox" checked />
+                    <span class="checkbox">
+                        <span class="checkbox-indicator">
+                            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 8L6.5 11.5L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-content">
+                        <span class="checkbox-label">Enable notifications</span>
+                        <span class="checkbox-description">You can enable or disable notifications at any time.</span>
+                    </span>
+                </label>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Checkbox with Description --&gt;
+&lt;label class="checkbox-container"&gt;
+  &lt;input type="checkbox" checked /&gt;
+  &lt;span class="checkbox"&gt;
+    &lt;span class="checkbox-indicator"&gt;
+      &lt;svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M3 8L6.5 11.5L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/&gt;
+      &lt;/svg&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span class="checkbox-content"&gt;
+    &lt;span class="checkbox-label"&gt;Enable notifications&lt;/span&gt;
+    &lt;span class="checkbox-description"&gt;You can enable or disable notifications at any time.&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Basic Checkbox -->
+        <div class="component-container">
+            <div class="component-preview">
+                <label class="checkbox-container">
+                    <input type="checkbox" />
+                    <span class="checkbox">
+                        <span class="checkbox-indicator">
+                            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 8L6.5 11.5L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-label">I agree to the privacy policy</span>
+                </label>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Basic Checkbox --&gt;
+&lt;label class="checkbox-container"&gt;
+  &lt;input type="checkbox" /&gt;
+  &lt;span class="checkbox"&gt;
+    &lt;span class="checkbox-indicator"&gt;
+      &lt;svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M3 8L6.5 11.5L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/&gt;
+      &lt;/svg&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span class="checkbox-label"&gt;I agree to the privacy policy&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disabled Checkbox -->
+        <div class="component-container">
+            <div class="component-preview">
+                <label class="checkbox-container">
+                    <input type="checkbox" disabled />
+                    <span class="checkbox">
+                        <span class="checkbox-indicator">
+                            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 8L6.5 11.5L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-label">Disabled checkbox</span>
+                </label>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Disabled Checkbox --&gt;
+&lt;label class="checkbox-container"&gt;
+  &lt;input type="checkbox" disabled /&gt;
+  &lt;span class="checkbox"&gt;
+    &lt;span class="checkbox-indicator"&gt;
+      &lt;svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M3 8L6.5 11.5L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/&gt;
+      &lt;/svg&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span class="checkbox-label"&gt;Disabled checkbox&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checked Disabled Checkbox -->
+        <div class="component-container">
+            <div class="component-preview">
+                <label class="checkbox-container">
+                    <input type="checkbox" checked disabled />
+                    <span class="checkbox">
+                        <span class="checkbox-indicator">
+                            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 8L6.5 11.5L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-label">Checked disabled checkbox</span>
+                </label>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Checked Disabled Checkbox --&gt;
+&lt;label class="checkbox-container"&gt;
+  &lt;input type="checkbox" checked disabled /&gt;
+  &lt;span class="checkbox"&gt;
+    &lt;span class="checkbox-indicator"&gt;
+      &lt;svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M3 8L6.5 11.5L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/&gt;
+      &lt;/svg&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span class="checkbox-label"&gt;Checked disabled checkbox&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="mx/main.js"></script>
+    <div class="container">
+        <h1 class="section-title">Carousel</h1>
+        
+        <!-- Default Carousel -->
+        <div class="component-container">
+            <div class="component-preview" style="max-width: 600px; margin: 0 auto;">
+                <div class="carousel" data-autoplay="true" data-interval="5000" data-loop="true">
+                    <div class="carousel-viewport">
+                        <div class="carousel-container">
+                            <div class="carousel-slide">
+                                <div class="carousel-content">
+                                    <h3>First Slide</h3>
+                                    <p>This is the first slide of the carousel.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="carousel-content">
+                                    <h3>Second Slide</h3>
+                                    <p>This is the second slide of the carousel.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="carousel-content">
+                                    <h3>Third Slide</h3>
+                                    <p>This is the third slide of the carousel.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-button" data-carousel-prev aria-label="Previous slide">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m15 18-6-6 6-6"/>
+                            </svg>
+                        </button>
+                        <button class="carousel-button" data-carousel-next aria-label="Next slide">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m9 18 6-6-6-6"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="carousel-indicators"></div>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Default Carousel --&gt;
+&lt;div class="carousel" data-autoplay="true" data-interval="5000" data-loop="true"&gt;
+  &lt;div class="carousel-viewport"&gt;
+    &lt;div class="carousel-container"&gt;
+      &lt;div class="carousel-slide"&gt;
+        &lt;div class="carousel-content"&gt;
+          &lt;h3&gt;First Slide&lt;/h3&gt;
+          &lt;p&gt;This is the first slide of the carousel.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="carousel-slide"&gt;
+        &lt;div class="carousel-content"&gt;
+          &lt;h3&gt;Second Slide&lt;/h3&gt;
+          &lt;p&gt;This is the second slide of the carousel.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="carousel-slide"&gt;
+        &lt;div class="carousel-content"&gt;
+          &lt;h3&gt;Third Slide&lt;/h3&gt;
+          &lt;p&gt;This is the third slide of the carousel.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="carousel-controls"&gt;
+    &lt;button class="carousel-button" data-carousel-prev aria-label="Previous slide"&gt;
+      &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+        &lt;path d="m15 18-6-6 6-6"/&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+    &lt;button class="carousel-button" data-carousel-next aria-label="Next slide"&gt;
+      &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+        &lt;path d="m9 18 6-6-6-6"/&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="carousel-indicators"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel with Images -->
+        <div class="component-container">
+            <div class="component-preview" style="max-width: 600px; margin: 2rem auto 0; text-align: center;">
+                <h4 class="section-subtitle">Carousel with Images</h4>
+                <div class="carousel">
+                    <div class="carousel-viewport">
+                        <div class="carousel-container">
+                            <div class="carousel-slide carousel-slide-image">
+                                <img src="https://picsum.photos/600/300?random=1" alt="Random image 1" class="carousel-image">
+                            </div>
+                            <div class="carousel-slide carousel-slide-image">
+                                <img src="https://picsum.photos/600/300?random=2" alt="Random image 2" class="carousel-image">
+                            </div>
+                            <div class="carousel-slide carousel-slide-image">
+                                <img src="https://picsum.photos/600/300?random=3" alt="Random image 3" class="carousel-image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-button" data-carousel-prev aria-label="Previous slide">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m15 18-6-6 6-6"/>
+                            </svg>
+                        </button>
+                        <button class="carousel-button" data-carousel-next aria-label="Next slide">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m9 18 6-6-6-6"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="carousel-indicators"></div>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Carousel with Images --&gt;
+&lt;div class="carousel"&gt;
+  &lt;div class="carousel-viewport"&gt;
+    &lt;div class="carousel-container"&gt;
+      &lt;div class="carousel-slide carousel-slide-image"&gt;
+        &lt;img src="https://picsum.photos/600/300?random=1" alt="Random image 1" class="carousel-image"&gt;
+      &lt;/div&gt;
+      &lt;div class="carousel-slide carousel-slide-image"&gt;
+        &lt;img src="https://picsum.photos/600/300?random=2" alt="Random image 2" class="carousel-image"&gt;
+      &lt;/div&gt;
+      &lt;div class="carousel-slide carousel-slide-image"&gt;
+        &lt;img src="https://picsum.photos/600/300?random=3" alt="Random image 3" class="carousel-image"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="carousel-controls"&gt;
+    &lt;button class="carousel-button" data-carousel-prev aria-label="Previous slide"&gt;
+      &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+        &lt;path d="m15 18-6-6 6-6"/&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+    &lt;button class="carousel-button" data-carousel-next aria-label="Next slide"&gt;
+      &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+        &lt;path d="m9 18 6-6-6-6"/&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="carousel-indicators"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pagination Demo -->
+    <div class="container">
+        <h1 class="section-title">Pagination</h1>
+        
+        <!-- Default Pagination -->
+        <div class="component-container">
+            <div class="component-preview">
+                <h3 class="section-subtitle">Default</h3>
+                <div class="pagination" data-pagination data-total-pages="10" data-current-page="1"></div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Default Pagination --&gt;
+&lt;div class="pagination" 
+     data-pagination 
+     data-total-pages="10" 
+     data-current-page="1"&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Small Pagination -->
+        <div class="component-container">
+            <div class="component-preview">
+                <h3 class="section-subtitle">Small Size</h3>
+                <div class="pagination pagination-sm" 
+                     data-pagination 
+                     data-total-pages="5" 
+                     data-current-page="1"&gt;
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Small Pagination --&gt;
+&lt;div class="pagination pagination-sm"
+     data-pagination
+     data-total-pages="5"
+     data-current-page="1"&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Large Pagination -->
+        <div class="component-container">
+            <div class="component-preview">
+                <h3 class="section-subtitle">Large Size</h3>
+                <div class="pagination pagination-lg" 
+                     data-pagination 
+                     data-total-pages="5" 
+                     data-current-page="1"&gt;
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Large Pagination --&gt;
+&lt;div class="pagination pagination-lg"
+     data-pagination
+     data-total-pages="5"
+     data-current-page="1"&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    
+    <script>
+    // Pagination initialization is handled by the component
+    </script>
+
+    <!-- Separator Demo -->
+    <div class="container">
+        <h1 class="section-title">Separator</h1>
+        
+        <!-- Horizontal Separator -->
+        <div class="component-container">
+            <div class="component-preview">
+                <h3 class="section-subtitle">Horizontal</h3>
+                <div>
+                    <p>Content above the separator</p>
+                    <div data-separator></div>
+                    <p>Content below the separator</p>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Horizontal Separator --&gt;
+&lt;div&gt;
+  &lt;p&gt;Content above the separator&lt;/p&gt;
+  &lt;div data-separator&gt;&lt;/div&gt;
+  &lt;p&gt;Content below the separator&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Vertical Separator -->
+        <div class="component-container">
+            <div class="component-preview">
+                <h3 class="section-subtitle">Vertical</h3>
+                <div style="display: flex; height: 100px; align-items: center; gap: 1rem;">
+                    <span>Left content</span>
+                    <div data-separator data-vertical></div>
+                    <span>Right content</span>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Vertical Separator --&gt;
+&lt;div style="display: flex; height: 100px; align-items: center; gap: 1rem;"&gt;
+  &lt;span&gt;Left content&lt;/span&gt;
+  &lt;div data-separator data-vertical&gt;&lt;/div&gt;
+  &lt;span&gt;Right content&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slider Demo -->
+    <div class="container">
+        <h1 class="section-title">Slider</h1>
+        
+        <!-- Default Slider -->
+        <div class="component-container">
+            <div class="component-preview" style="max-width: 400px;">
+                <h3 class="section-subtitle">Default</h3>
+                <div data-slider data-min="0" data-max="100" data-step="1" data-value="50"></div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Default Slider --&gt;
+&lt;div data-slider 
+     data-min="0" 
+     data-max="100" 
+     data-step="1" 
+     data-value="50"&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Disabled Slider -->
+        <div class="component-container">
+            <div class="component-preview" style="max-width: 400px;">
+                <h3 class="section-subtitle">Disabled</h3>
+                <div data-slider data-min="0" data-max="100" data-value="75" data-disabled></div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Disabled Slider --&gt;
+&lt;div data-slider 
+     data-min="0" 
+     data-max="100" 
+     data-value="75" 
+     data-disabled&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Switch Demo -->
+    <div class="container">
+        <h1 class="section-title">Switch</h1>
+        
+        <!-- Default Switch -->
+        <div class="component-container">
+            <div class="component-preview">
+                <h3 class="section-subtitle">Default</h3>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <label class="switch">
+                        <input type="checkbox" class="switch-input" data-switch>
+                        <span class="switch-track">
+                            <span class="switch-thumb"></span>
+                        </span>
+                        <span class="switch-label">Airplane Mode</span>
+                    </label>
+                    
+                    <label class="switch">
+                        <input type="checkbox" class="switch-input" data-switch checked>
+                        <span class="switch-track">
+                            <span class="switch-thumb"></span>
+                        </span>
+                        <span class="switch-label">Wi-Fi</span>
+                    </label>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Default Switch --&gt;
+&lt;label class="switch"&gt;
+  &lt;input type="checkbox" class="switch-input" data-switch&gt;
+  &lt;span class="switch-track"&gt;
+    &lt;span class="switch-thumb"&gt;&lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span class="switch-label"&gt;Airplane Mode&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;!-- Checked State --&gt;
+&lt;label class="switch"&gt;
+  &lt;input type="checkbox" class="switch-input" data-switch checked&gt;
+  &lt;span class="switch-track"&gt;
+    &lt;span class="switch-thumb"&gt;&lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span class="switch-label"&gt;Wi-Fi&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sizes -->
+        <div class="component-container">
+            <div class="component-preview">
+                <h3 class="section-subtitle">Sizes</h3>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <label class="switch">
+                        <input type="checkbox" class="switch-input" data-switch data-size="sm">
+                        <span class="switch-track">
+                            <span class="switch-thumb"></span>
+                        </span>
+                        <span class="switch-label">Small</span>
+                    </label>
+                    
+                    <label class="switch">
+                        <input type="checkbox" class="switch-input" data-switch checked>
+                        <span class="switch-track">
+                            <span class="switch-thumb"></span>
+                        </span>
+                        <span class="switch-label">Default</span>
+                    </label>
+                    
+                    <label class="switch">
+                        <input type="checkbox" class="switch-input" data-switch data-size="lg" checked>
+                        <span class="switch-track">
+                            <span class="switch-thumb"></span>
+                        </span>
+                        <span class="switch-label">Large</span>
+                    </label>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Small Size --&gt;
+&lt;label class="switch"&gt;
+  &lt;input type="checkbox" class="switch-input" data-switch data-size="sm"&gt;
+  &lt;span class="switch-track"&gt;
+    &lt;span class="switch-thumb"&gt;&lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span class="switch-label"&gt;Small&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;!-- Default Size --&gt;
+&lt;label class="switch"&gt;
+  &lt;input type="checkbox" class="switch-input" data-switch checked&gt;
+  &lt;span class="switch-track"&gt;
+    &lt;span class="switch-thumb"&gt;&lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span class="switch-label"&gt;Default&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;!-- Large Size --&gt;
+&lt;label class="switch"&gt;
+  &lt;input type="checkbox" class="switch-input" data-switch data-size="lg" checked&gt;
+  &lt;span class="switch-track"&gt;
+    &lt;span class="switch-thumb"&gt;&lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span class="switch-label"&gt;Large&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Disabled State -->
+        <div class="component-container">
+            <div class="component-preview">
+                <h3 class="section-subtitle">Disabled</h3>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <label class="switch">
+                        <input type="checkbox" class="switch-input" data-switch disabled>
+                        <span class="switch-track">
+                            <span class="switch-thumb"></span>
+                        </span>
+                        <span class="switch-label">Disabled</span>
+                    </label>
+                    
+                    <label class="switch">
+                        <input type="checkbox" class="switch-input" data-switch checked disabled>
+                        <span class="switch-track">
+                            <span class="switch-thumb"></span>
+                        </span>
+                        <span class="switch-label">Disabled (checked)</span>
+                    </label>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Disabled Switch --&gt;
+&lt;label class="switch"&gt;
+  &lt;input type="checkbox" class="switch-input" data-switch disabled&gt;
+  &lt;span class="switch-track"&gt;
+    &lt;span class="switch-thumb"&gt;&lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span class="switch-label"&gt;Disabled&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;!-- Disabled Checked --&gt;
+&lt;label class="switch"&gt;
+  &lt;input type="checkbox" class="switch-input" data-switch checked disabled&gt;
+  &lt;span class="switch-track"&gt;
+    &lt;span class="switch-thumb"&gt;&lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span class="switch-label"&gt;Disabled (checked)&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <!-- With Event Listener -->
+        <div class="component-container">
+            <div class="component-preview">
+                <h3 class="section-subtitle">With Event Listener</h3>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <label class="switch">
+                        <input type="checkbox" class="switch-input" id="event-switch" data-switch>
+                        <span class="switch-track">
+                            <span class="switch-thumb"></span>
+                        </span>
+                        <span class="switch-label">Toggle me</span>
+                    </label>
+                    <p id="switch-status" style="margin-top: 0.5rem;">Status: Off</p>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- HTML --&gt;
+&lt;label class="switch"&gt;
+  &lt;input type="checkbox" class="switch-input" id="event-switch" data-switch&gt;
+  &lt;span class="switch-track"&gt;
+    &lt;span class="switch-thumb"&gt;&lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span class="switch-label"&gt;Toggle me&lt;/span&gt;
+&lt;/label&gt;
+&lt;p id="switch-status" style="margin-top: 0.5rem;"&gt;Status: Off&lt;/p&gt;
+
+&lt;!-- JavaScript --&gt;
+&lt;script&gt;
+  const eventSwitch = document.getElementById('event-switch');
+  const switchStatus = document.getElementById('switch-status');
+  
+  if (eventSwitch && switchStatus) {
+    eventSwitch.addEventListener('change', (e) => {
+      switchStatus.textContent = `Status: ${e.target.checked ? 'On' : 'Off'}`;
+    });
+  }
+&lt;/script&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const eventSwitch = document.getElementById('event-switch');
+        const switchStatus = document.getElementById('switch-status');
+        
+        if (eventSwitch && switchStatus) {
+            eventSwitch.addEventListener('change', (e) => {
+                switchStatus.textContent = `Status: ${e.target.checked ? 'On' : 'Off'}`;
+            });
+        }
+    </script>
+
+    <!-- Hover Card Demo -->
+    <div class="container">
+        <h1 class="section-title">Hover Card</h1>
+        
+        <!-- Default Hover Card -->
+        <div class="component-container">
+            <div class="component-preview" style="display: flex; flex-wrap: wrap; gap: 2rem;">
+                <div class="hover-card" data-hover-card>
+                    <button class="hover-card-trigger" data-hover-card-trigger>
+                        @mxuser
+                    </button>
+                    <div class="hover-card-content" data-hover-card-content hidden>
+                        <div class="hover-card-content-wrapper">
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                    <div style="width: 2.5rem; height: 2.5rem; border-radius: 50%; background-color: var(--muted); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: 500;">
+                                        M
+                                    </div>
+                                    <div>
+                                        <div style="font-weight: 600; color: var(--foreground);">mxuser</div>
+                                        <div style="font-size: 0.875rem; color: var(--muted-foreground);">mxuser@example.com</div>
+                                    </div>
+                                </div>
+                                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--muted-foreground);">
+                                    This is a default hover card that appears when you hover over the trigger.
+                                </p>
+                                <button class="btn btn-sm btn-outline" style="margin-top: 0.5rem; width: 100%;">
+                                    View Profile
+                                </button>
+                            </div>
+                        </div>
+                        <div class="hover-card-arrow" data-hover-card-arrow>
+                            <svg width="10" height="5" viewBox="0 0 30 10" preserveAspectRatio="none">
+                                <polygon points="0,0 15,10 30,0" fill="currentColor" stroke="currentColor" stroke-width="1" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Default Hover Card --&gt;
+&lt;div class="hover-card" data-hover-card&gt;
+  &lt;button class="hover-card-trigger" data-hover-card-trigger&gt;
+    @mxuser
+  &lt;/button&gt;
+  &lt;div class="hover-card-content" data-hover-card-content hidden&gt;
+    &lt;div class="hover-card-content-wrapper"&gt;
+      &lt;div style="display: flex; flex-direction: column; gap: 0.5rem;"&gt;
+        &lt;div style="display: flex; align-items: center; gap: 0.75rem;"&gt;
+          &lt;div style="width: 2.5rem; height: 2.5rem; border-radius: 50%; background-color: var(--muted); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: 500;"&gt;
+            M
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;div style="font-weight: 600; color: var(--foreground);"&gt;mxuser&lt;/div&gt;
+            &lt;div style="font-size: 0.875rem; color: var(--muted-foreground);"&gt;mxuser@example.com&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--muted-foreground);"&gt;
+          This is a default hover card that appears when you hover over the trigger.
+        &lt;/p&gt;
+        &lt;button class="btn btn-sm btn-outline" style="margin-top: 0.5rem; width: 100%;"&gt;
+          View Profile
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="hover-card-arrow" data-hover-card-arrow&gt;
+      &lt;svg width="10" height="5" viewBox="0 0 30 10" preserveAspectRatio="none"&gt;
+        &lt;polygon points="0,0 15,10 30,0" fill="currentColor" stroke="currentColor" stroke-width="1" /&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hover Card with Image -->
+        <div class="component-container">
+            <div class="component-preview" style="display: flex; flex-wrap: wrap; gap: 2rem;">
+                <div class="hover-card" data-hover-card>
+                    <a href="#" class="hover-card-trigger" data-hover-card-trigger>
+                        Hover over me
+                    </a>
+                    <div class="hover-card-content" data-hover-card-content hidden style="width: 280px;">
+                        <div class="hover-card-content-wrapper" style="padding: 0;">
+                            <div style="width: 100%; height: 140px; background-color: var(--muted); display: flex; align-items: center; justify-content: center; color: var(--muted-foreground);">
+                                Image
+                            </div>
+                            <div style="padding: 1rem;">
+                                <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Hover Card with Image</h3>
+                                <p style="font-size: 0.875rem; color: var(--muted-foreground); margin-bottom: 1rem;">
+                                    This hover card has an image and some content. It will automatically position itself based on available space.
+                                </p>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--muted-foreground);">
+                                    <span>Created: 2023-05-15</span>
+                                    <span>By: Admin</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hover-card-arrow" data-hover-card-arrow>
+                            <svg width="10" height="5" viewBox="0 0 30 10" preserveAspectRatio="none">
+                                <polygon points="0,0 15,10 30,0" fill="currentColor" stroke="currentColor" stroke-width="1" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Hover Card with Image --&gt;
+&lt;div class="hover-card" data-hover-card&gt;
+  &lt;a href="#" class="hover-card-trigger" data-hover-card-trigger&gt;
+    Hover over me
+  &lt;/a&gt;
+  &lt;div class="hover-card-content" data-hover-card-content hidden style="width: 280px;"&gt;
+    &lt;div class="hover-card-content-wrapper" style="padding: 0;"&gt;
+      &lt;div style="width: 100%; height: 140px; background-color: var(--muted); display: flex; align-items: center; justify-content: center; color: var(--muted-foreground);"&gt;
+        Image
+      &lt;/div&gt;
+      &lt;div style="padding: 1rem;"&gt;
+        &lt;h3 style="font-weight: 600; margin-bottom: 0.5rem;"&gt;Hover Card with Image&lt;/h3&gt;
+        &lt;p style="font-size: 0.875rem; color: var(--muted-foreground); margin-bottom: 1rem;"&gt;
+          This hover card has an image and some content. It will automatically position itself based on available space.
+        &lt;/p&gt;
+        &lt;div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--muted-foreground);"&gt;
+          &lt;span&gt;Created: 2023-05-15&lt;/span&gt;
+          &lt;span&gt;By: Admin&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="hover-card-arrow" data-hover-card-arrow&gt;
+      &lt;svg width="10" height="5" viewBox="0 0 30 10" preserveAspectRatio="none"&gt;
+        &lt;polygon points="0,0 15,10 30,0" fill="currentColor" stroke="currentColor" stroke-width="1" /&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hover Card with Custom Delay -->
+        <div class="component-container">
+            <div class="component-preview" style="display: flex; flex-wrap: wrap; gap: 2rem;">
+                <div class="hover-card" data-hover-card data-delay="500">
+                    <span class="hover-card-trigger" tabindex="0" data-hover-card-trigger>
+                        Custom delay (500ms)
+                    </span>
+                    <div class="hover-card-content" data-hover-card-content hidden>
+                        <div class="hover-card-content-wrapper">
+                            <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Custom Delay</h3>
+                            <p style="font-size: 0.875rem; color: var(--muted-foreground);">
+                                This hover card has a custom delay of 500ms before appearing.
+                            </p>
+                        </div>
+                        <div class="hover-card-arrow" data-hover-card-arrow>
+                            <svg width="10" height="5" viewBox="0 0 30 10" preserveAspectRatio="none">
+                                <polygon points="0,0 15,10 30,0" fill="currentColor" stroke="currentColor" stroke-width="1" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Hover Card with Custom Delay --&gt;
+&lt;div class="hover-card" data-hover-card data-delay="500"&gt;
+  &lt;span class="hover-card-trigger" tabindex="0" data-hover-card-trigger&gt;
+    Custom delay (500ms)
+  &lt;/span&gt;
+  &lt;div class="hover-card-content" data-hover-card-content hidden&gt;
+    &lt;div class="hover-card-content-wrapper"&gt;
+      &lt;h3 style="font-weight: 600; margin-bottom: 0.5rem;"&gt;Custom Delay&lt;/h3&gt;
+      &lt;p style="font-size: 0.875rem; color: var(--muted-foreground);"&gt;
+        This hover card has a custom delay of 500ms before appearing.
+      &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="hover-card-arrow" data-hover-card-arrow&gt;
+      &lt;svg width="10" height="5" viewBox="0 0 30 10" preserveAspectRatio="none"&gt;
+        &lt;polygon points="0,0 15,10 30,0" fill="currentColor" stroke="currentColor" stroke-width="1" /&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dropdown Menu Demo -->
+    <div class="container">
+        <h1 class="section-title">Dropdown Menu</h1>
+        
+        <!-- Default Dropdown -->
+        <div class="component-container">
+            <div class="component-preview" style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                <div class="dropdown" data-position="bottom-start">
+                    <button class="btn btn-outline" data-dropdown-trigger>
+                        Default
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2">
+                            <path d="m6 9 6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content" data-dropdown-menu>
+                        <button class="dropdown-item" role="menuitem">
+                            <span>New Tab</span>
+                            <span class="dropdown-shortcut">⌘T</span>
+                        </button>
+                        <button class="dropdown-item" role="menuitem">
+                            <span>New Window</span>
+                            <span class="dropdown-shortcut">⌘N</span>
+                        </button>
+                        <div data-separator></div>
+                        <div class="dropdown-group">
+                            <div class="dropdown-label">Recent</div>
+                            <button class="dropdown-item" role="menuitem">
+                                <span>Document 1</span>
+                            </button>
+                            <button class="dropdown-item" role="menuitem">
+                                <span>Spreadsheet</span>
+                            </button>
+                        </div>
+                        <div data-separator></div>
+                        <button class="dropdown-item dropdown-item-danger" role="menuitem">
+                            <span>Delete</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Default Dropdown Menu --&gt;
+&lt;div class="dropdown" data-position="bottom-start"&gt;
+  &lt;button class="btn btn-outline" data-dropdown-trigger&gt;
+    Default
+    &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2"&gt;
+      &lt;path d="m6 9 6 6 6-6"/&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;div class="dropdown-content" data-dropdown-menu&gt;
+    &lt;button class="dropdown-item" role="menuitem"&gt;
+      &lt;span&gt;New Tab&lt;/span&gt;
+      &lt;span class="dropdown-shortcut"&gt;⌘T&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button class="dropdown-item" role="menuitem"&gt;
+      &lt;span&gt;New Window&lt;/span&gt;
+      &lt;span class="dropdown-shortcut"&gt;⌘N&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div data-separator&gt;&lt;/div&gt;
+    &lt;div class="dropdown-group"&gt;
+      &lt;div class="dropdown-label"&gt;Recent&lt;/div&gt;
+      &lt;button class="dropdown-item" role="menuitem"&gt;
+        &lt;span&gt;Document 1&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;button class="dropdown-item" role="menuitem"&gt;
+        &lt;span&gt;Spreadsheet&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div data-separator&gt;&lt;/div&gt;
+    &lt;button class="dropdown-item dropdown-item-danger" role="menuitem"&gt;
+      &lt;span&gt;Delete&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dropdown with Icons -->
+        <div class="component-container">
+            <div class="component-preview" style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                <div class="dropdown" data-position="bottom-start">
+                    <button class="btn btn-outline" data-dropdown-trigger>
+                        With Icons
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2">
+                            <path d="m6 9 6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content" data-dropdown-menu>
+                        <button class="dropdown-item" role="menuitem">
+                            <svg class="dropdown-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                                <polyline points="17 21 17 13 7 13 7 21"/>
+                                <polyline points="7 3v5h8"/>
+                            </svg>
+                            <span>Save</span>
+                            <span class="dropdown-shortcut">⌘S</span>
+                        </button>
+                        <button class="dropdown-item" role="menuitem">
+                            <svg class="dropdown-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            <span>Export</span>
+                        </button>
+                        <button class="dropdown-item" role="menuitem" disabled>
+                            <svg class="dropdown-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                            </svg>
+                            <span>Dark Mode (Disabled)</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Dropdown with Icons --&gt;
+&lt;div class="dropdown" data-position="bottom-start"&gt;
+  &lt;button class="btn btn-outline" data-dropdown-trigger&gt;
+    With Icons
+    &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2"&gt;
+      &lt;path d="m6 9 6 6 6-6"/&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;div class="dropdown-content" data-dropdown-menu&gt;
+    &lt;button class="dropdown-item" role="menuitem"&gt;
+      &lt;svg class="dropdown-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+        &lt;path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/&gt;
+        &lt;polyline points="17 21 17 13 7 13 7 21"/&gt;
+        &lt;polyline points="7 3v5h8"/&gt;
+      &lt;/svg&gt;
+      &lt;span&gt;Save&lt;/span&gt;
+      &lt;span class="dropdown-shortcut"&gt;⌘S&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button class="dropdown-item" role="menuitem"&gt;
+      &lt;svg class="dropdown-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+        &lt;path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/&gt;
+        &lt;polyline points="7 10 12 15 17 10"/&gt;
+        &lt;line x1="12" y1="15" x2="12" y2="3"/&gt;
+      &lt;/svg&gt;
+      &lt;span&gt;Export&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button class="dropdown-item" role="menuitem" disabled&gt;
+      &lt;svg class="dropdown-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+        &lt;path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/&gt;
+      &lt;/svg&gt;
+      &lt;span&gt;Dark Mode (Disabled)&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Checkbox and Radio Dropdown -->
+        <div class="component-container">
+            <div class="component-preview" style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                <div class="dropdown" data-position="bottom-start">
+                    <button class="btn btn-outline" data-dropdown-trigger>
+                        Checkbox Items
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2">
+                            <path d="m6 9 6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content" data-dropdown-menu>
+                        <div class="dropdown-label">Status</div>
+                        <button class="dropdown-checkbox-item dropdown-checkbox-item-checked" role="menuitemcheckbox" aria-checked="true">
+                            <span>Show online</span>
+                        </button>
+                        <button class="dropdown-checkbox-item" role="menuitemcheckbox" aria-checked="false">
+                            <span>Show notifications</span>
+                        </button>
+                        <div data-separator></div>
+                        <div class="dropdown-label">Sort by</div>
+                        <button class="dropdown-radio-item dropdown-radio-item-checked" role="menuitemradio" aria-checked="true">
+                            <span>Newest</span>
+                        </button>
+                        <button class="dropdown-radio-item" role="menuitemradio" aria-checked="false">
+                            <span>Oldest</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <div class="code-toolbar">
+                    <pre><code class="language-html">&lt;!-- Dropdown with Checkbox and Radio Items --&gt;
+&lt;div class="dropdown" data-position="bottom-start"&gt;
+  &lt;button class="btn btn-outline" data-dropdown-trigger&gt;
+    Checkbox Items
+    &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2"&gt;
+      &lt;path d="m6 9 6 6 6-6"/&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;div class="dropdown-content" data-dropdown-menu&gt;
+    &lt;div class="dropdown-label"&gt;Status&lt;/div&gt;
+    &lt;button class="dropdown-checkbox-item dropdown-checkbox-item-checked" role="menuitemcheckbox" aria-checked="true"&gt;
+      &lt;span&gt;Show online&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button class="dropdown-checkbox-item" role="menuitemcheckbox" aria-checked="false"&gt;
+      &lt;span&gt;Show notifications&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div data-separator&gt;&lt;/div&gt;
+    &lt;div class="dropdown-label"&gt;Sort by&lt;/div&gt;
+    &lt;button class="dropdown-radio-item dropdown-radio-item-checked" role="menuitemradio" aria-checked="true"&gt;
+      &lt;span&gt;Newest&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button class="dropdown-radio-item" role="menuitemradio" aria-checked="false"&gt;
+      &lt;span&gt;Oldest&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Drawer Component -->
+    <div class="container">
+        <h1 class="section-title">Drawer</h1>
+        
+        <!-- Right Drawer -->
+        <div class="component-container">
+            <div class="component-preview">
+                <button class="btn btn-primary" data-drawer-trigger="right-drawer">
+                    Open Right Drawer
+                </button>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <pre><code class="language-html">&lt;!-- Right Drawer Trigger --&gt;
+&lt;button class="btn btn-primary" data-drawer-trigger="right-drawer"&gt;
+  Open Right Drawer
+&lt;/button&gt;
+
+&lt;!-- Right Drawer --&gt;
+&lt;div class="drawer drawer-right" id="right-drawer" aria-labelledby="right-drawer-title"&gt;
+  &lt;div class="drawer-overlay"&gt;&lt;/div&gt;
+  &lt;div class="drawer-content"&gt;
+    &lt;div class="drawer-header"&gt;
+      &lt;h2 class="drawer-title" id="right-drawer-title"&gt;Right Drawer&lt;/h2&gt;
+      &lt;button class="drawer-close" data-drawer-close aria-label="Close"&gt;
+        &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+          &lt;path d="M18 6 6 18"/&gt;
+          &lt;path d="m6 6 12 12"/&gt;
+        &lt;/svg&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="drawer-body"&gt;
+      &lt;p&gt;This is a right drawer. Click outside or press Escape to close.&lt;/p&gt;
+      &lt;div style="margin-top: 1rem;"&gt;
+        &lt;p&gt;Some content here...&lt;/p&gt;
+        &lt;button class="btn btn-outline" style="margin-top: 1rem;"&gt;Action&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="drawer-footer"&gt;
+      &lt;button class="btn btn-outline" data-drawer-close&gt;Cancel&lt;/button&gt;
+      &lt;button class="btn btn-primary"&gt;Save&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+
+        <!-- Left Drawer -->
+        <div class="component-container">
+            <div class="component-preview">
+                <button class="btn btn-primary" data-drawer-trigger="left-drawer">
+                    Open Left Drawer
+                </button>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <pre><code class="language-html">&lt;!-- Left Drawer Trigger --&gt;
+&lt;button class="btn btn-primary" data-drawer-trigger="left-drawer"&gt;
+  Open Left Drawer
+&lt;/button&gt;
+
+&lt;!-- Left Drawer --&gt;
+&lt;div class="drawer drawer-left" id="left-drawer"&gt;
+  &lt;div class="drawer-overlay"&gt;&lt;/div&gt;
+  &lt;div class="drawer-content"&gt;
+    &lt;div class="drawer-header"&gt;
+      &lt;h2 class="drawer-title"&gt;Left Drawer&lt;/h2&gt;
+      &lt;button class="drawer-close" data-drawer-close aria-label="Close"&gt;
+        &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+          &lt;path d="M18 6 6 18"/&gt;
+          &lt;path d="m6 6 12 12"/&gt;
+        &lt;/svg&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="drawer-body"&gt;
+      &lt;p&gt;This is a left drawer. Click outside or press Escape to close.&lt;/p&gt;
+      &lt;div style="margin-top: 1rem;"&gt;
+        &lt;p&gt;Some content here...&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="drawer-footer"&gt;
+      &lt;button class="btn btn-outline" data-drawer-close&gt;Close&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+
+        <!-- Top Drawer -->
+        <div class="component-container">
+            <div class="component-preview">
+                <button class="btn btn-primary" data-drawer-trigger="top-drawer">
+                    Open Top Drawer
+                </button>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <pre><code class="language-html">&lt;!-- Top Drawer Trigger --&gt;
+&lt;button class="btn btn-primary" data-drawer-trigger="top-drawer"&gt;
+  Open Top Drawer
+&lt;/button&gt;
+
+&lt;!-- Top Drawer --&gt;
+&lt;div class="drawer drawer-top" id="top-drawer"&gt;
+  &lt;div class="drawer-overlay"&gt;&lt;/div&gt;
+  &lt;div class="drawer-content"&gt;
+    &lt;div class="drawer-header"&gt;
+      &lt;h2 class="drawer-title"&gt;Top Drawer&lt;/h2&gt;
+      &lt;button class="drawer-close" data-drawer-close aria-label="Close"&gt;
+        &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+          &lt;path d="M18 6 6 18"/&gt;
+          &lt;path d="m6 6 12 12"/&gt;
+        &lt;/svg&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="drawer-body"&gt;
+      &lt;p&gt;This is a top drawer. Click outside or press Escape to close.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+
+        <!-- Bottom Drawer -->
+        <div class="component-container">
+            <div class="component-preview">
+                <button class="btn btn-primary" data-drawer-trigger="bottom-drawer">
+                    Open Bottom Drawer
+                </button>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <pre><code class="language-html">&lt;!-- Bottom Drawer Trigger --&gt;
+&lt;button class="btn btn-primary" data-drawer-trigger="bottom-drawer"&gt;
+  Open Bottom Drawer
+&lt;/button&gt;
+
+&lt;!-- Bottom Drawer --&gt;
+&lt;div class="drawer drawer-bottom" id="bottom-drawer"&gt;
+  &lt;div class="drawer-overlay"&gt;&lt;/div&gt;
+  &lt;div class="drawer-content"&gt;
+    &lt;div class="drawer-header"&gt;
+      &lt;h2 class="drawer-title"&gt;Bottom Drawer&lt;/h2&gt;
+      &lt;button class="drawer-close" data-drawer-close aria-label="Close"&gt;
+        &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+          &lt;path d="M18 6 6 18"/&gt;
+          &lt;path d="m6 6 12 12"/&gt;
+        &lt;/svg&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="drawer-body"&gt;
+      &lt;p&gt;This is a bottom drawer. Click outside or press Escape to close.&lt;/p&gt;
+      &lt;div style="margin-top: 1rem;"&gt;
+        &lt;button class="btn btn-primary"&gt;Action&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Drawer Components (Actual implementation, hidden from the main flow) -->
+    <div style="display: none;">
+        <!-- Right Drawer -->
+        <div class="drawer drawer-right" id="right-drawer" aria-labelledby="right-drawer-title" aria-describedby="right-drawer-description">
+            <div class="drawer-overlay"></div>
+            <div class="drawer-content">
+                <div class="drawer-header">
+                    <h2 class="drawer-title" id="right-drawer-title">Right Drawer</h2>
+                    <button class="drawer-close" data-drawer-close aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18"/>
+                            <path d="m6 6 12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="drawer-body">
+                    <p id="right-drawer-description">This is a right drawer. Click outside or press Escape to close.</p>
+                    <div style="margin-top: 1rem;">
+                        <p>Some content here...</p>
+                        <button class="btn btn-outline" style="margin-top: 1rem;">Action</button>
+                    </div>
+                </div>
+                <div class="drawer-footer">
+                    <button class="btn btn-outline" data-drawer-close>Cancel</button>
+                    <button class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left Drawer -->
+        <div class="drawer drawer-left" id="left-drawer">
+            <div class="drawer-overlay"></div>
+            <div class="drawer-content">
+                <div class="drawer-header">
+                    <h2 class="drawer-title">Left Drawer</h2>
+                    <button class="drawer-close" data-drawer-close aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18"/>
+                            <path d="m6 6 12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="drawer-body">
+                    <p>This is a left drawer. Click outside or press Escape to close.</p>
+                    <div style="margin-top: 1rem;">
+                        <p>Some content here...</p>
+                    </div>
+                </div>
+                <div class="drawer-footer">
+                    <button class="btn btn-outline" data-drawer-close>Close</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Drawer -->
+        <div class="drawer drawer-top" id="top-drawer">
+            <div class="drawer-overlay"></div>
+            <div class="drawer-content">
+                <div class="drawer-header">
+                    <h2 class="drawer-title">Top Drawer</h2>
+                    <button class="drawer-close" data-drawer-close aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18"/>
+                            <path d="m6 6 12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="drawer-body">
+                    <p>This is a top drawer. Click outside or press Escape to close.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Drawer -->
+        <div class="drawer drawer-bottom" id="bottom-drawer">
+            <div class="drawer-overlay"></div>
+            <div class="drawer-content">
+                <div class="drawer-header">
+                    <h2 class="drawer-title">Bottom Drawer</h2>
+                    <button class="drawer-close" data-drawer-close aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18"/>
+                            <path d="m6 6 12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="drawer-body">
+                    <p>This is a bottom drawer. Click outside or press Escape to close.</p>
+                    <div style="margin-top: 1rem;">
+                        <button class="btn btn-primary">Action</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dialog Component -->
+    <div class="container">
+        <h1 class="section-title">Dialog</h1>
+        
+        <!-- Default Dialog -->
+        <div class="component-container">
+            <div class="component-preview">
+                <button class="btn btn-primary" data-dialog-trigger="default-dialog">
+                    Open Default Dialog
+                </button>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <pre><code class="language-html">&lt;!-- Dialog Trigger --&gt;
+&lt;button class="btn btn-primary" data-dialog-trigger="default-dialog"&gt;
+  Open Default Dialog
+&lt;/button&gt;
+
+&lt;!-- Dialog Component --&gt;
+&lt;div class="dialog" id="default-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description"&gt;
+  &lt;div class="dialog-overlay"&gt;&lt;/div&gt;
+  &lt;div class="dialog-content"&gt;
+    &lt;div class="dialog-header"&gt;
+      &lt;h2 class="dialog-title" id="dialog-title"&gt;Are you absolutely sure?&lt;/h2&gt;
+      &lt;p class="dialog-description" id="dialog-description"&gt;
+        This action cannot be undone. This will permanently delete your account and remove your data from our servers.
+      &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="dialog-footer"&gt;
+      &lt;button class="btn btn-outline" data-dialog-close&gt;Cancel&lt;/button&gt;
+      &lt;button class="btn btn-destructive" data-dialog-close&gt;Delete&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        
+        <!-- Dialog with Form -->
+        <div class="component-container">
+            <div class="component-preview">
+                <button class="btn btn-primary" data-dialog-trigger="form-dialog">
+                    Open Form Dialog
+                </button>
+            </div>
+            <div class="component-code">
+                <button class="copy-btn btn btn-outline btn-sm">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <pre><code class="language-html">&lt;!-- Dialog with Form Trigger --&gt;
+&lt;button class="btn btn-primary" data-dialog-trigger="form-dialog"&gt;
+  Open Form Dialog
+&lt;/button&gt;
+
+&lt;!-- Dialog with Form --&gt;
+&lt;div class="dialog" id="form-dialog" aria-labelledby="form-dialog-title"&gt;
+  &lt;div class="dialog-overlay"&gt;&lt;/div&gt;
+  &lt;div class="dialog-content"&gt;
+    &lt;div class="dialog-header"&gt;
+      &lt;h2 class="dialog-title" id="form-dialog-title"&gt;Create New Project&lt;/h2&gt;
+      &lt;p class="dialog-description"&gt;Create a new project to organize your work.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="dialog-body"&gt;
+      &lt;form class="space-y-4"&gt;
+        &lt;div class="form-group"&gt;
+          &lt;label for="project-name" class="form-label"&gt;Project Name&lt;/label&gt;
+          &lt;input type="text" id="project-name" class="form-input" placeholder="My Awesome Project"&gt;
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+          &lt;label for="project-desc" class="form-label"&gt;Description&lt;/label&gt;
+          &lt;textarea id="project-desc" class="form-textarea" rows="3" placeholder="Project description...">&lt;/textarea&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;div class="dialog-footer"&gt;
+      &lt;button type="button" class="btn btn-outline" data-dialog-close&gt;Cancel&lt;/button&gt;
+      &lt;button type="submit" class="btn btn-primary"&gt;Create Project&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dialog Components (Actual implementation, hidden from the main flow) -->
+    <div style="display: none;">
+        <!-- Default Dialog -->
+        <div class="dialog" id="default-dialog" aria-labelledby="default-dialog-title" aria-describedby="default-dialog-description">
+            <div class="dialog-overlay"></div>
+            <div class="dialog-content">
+                <div class="dialog-header">
+                    <h2 class="dialog-title" id="default-dialog-title">Are you absolutely sure?</h2>
+                    <p class="dialog-description" id="default-dialog-description">
+                        This action cannot be undone. This will permanently delete your account and remove your data from our servers.
+                    </p>
+                </div>
+                <div class="dialog-footer">
+                    <button class="btn btn-outline" data-dialog-close>Cancel</button>
+                    <button class="btn btn-destructive" data-dialog-close>Delete</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Dialog -->
+        <div class="dialog" id="form-dialog" aria-labelledby="form-dialog-title">
+            <div class="dialog-overlay"></div>
+            <div class="dialog-content">
+                <div class="dialog-header">
+                    <h2 class="dialog-title" id="form-dialog-title">Create New Project</h2>
+                    <p class="dialog-description">Create a new project to organize your work.</p>
+                </div>
+                <div class="dialog-body">
+                    <form class="space-y-4">
+                        <div class="form-group">
+                            <label for="project-name" class="form-label">Project Name</label>
+                            <input type="text" id="project-name" class="form-input" placeholder="My Awesome Project">
+                        </div>
+                        <div class="form-group">
+                            <label for="project-desc" class="form-label">Description</label>
+                            <textarea id="project-desc" class="form-textarea" rows="3" placeholder="Project description..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="dialog-footer">
+                    <button type="button" class="btn btn-outline" data-dialog-close>Cancel</button>
+                    <button type="submit" class="btn btn-primary">Create Project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main JavaScript Bundle -->
+    <script type="module" src="mx/main.js"></script>
+    
+    <script>
+        // Copy to clipboard functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle copy buttons
+            document.querySelectorAll('.copy-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const codeBlock = this.nextElementSibling;
+                    const code = codeBlock.textContent;
+                    
+                    navigator.clipboard.writeText(code).then(() => {
+                        // Visual feedback
+                        const icon = this.querySelector('svg').outerHTML;
+                        const originalText = this.querySelector('span')?.textContent || 'Copy';
+                        
+                        // Update button state
+                        this.classList.remove('btn-outline');
+                        this.classList.add('btn-primary');
+                        this.innerHTML = `
+                            ${icon}
+                            <span>Copied!</span>
+                        `;
+                        
+                        // Revert after delay
+                        setTimeout(() => {
+                            this.classList.remove('btn-primary');
+                            this.classList.add('btn-outline');
+                            this.innerHTML = `
+                                ${icon}
+                                <span>${originalText}</span>
+                            `;
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Failed to copy text: ', err);
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

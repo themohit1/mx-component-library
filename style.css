@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.btn-variants{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}

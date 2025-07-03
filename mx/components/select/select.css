@@ -1,0 +1,84 @@
+.select {
+  position: relative;
+  width: 180px;
+}
+.select-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-2) var(--spacing-3);
+  background-color: var(--input);
+  color: var(--foreground);
+  border: 1px solid var(--input);
+  border-radius: var(--spacing-2);
+  cursor: pointer;
+  transition: border-color 0.2s var(--transition-timing-function), box-shadow 0.2s var(--transition-timing-function);
+}
+.select-trigger:focus {
+  outline: none;
+  border-color: var(--ring);
+  box-shadow: 0 0 0 2px var(--ring);
+}
+.select-value {
+  flex: 1;
+  text-align: left;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+.select-icon {
+  margin-left: 0.5rem;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+.select-content {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.25rem);
+  width: 100%;
+  background: var(--popover);
+  color: var(--popover-foreground);
+  border: 1px solid var(--input);
+  border-radius: var(--spacing-2);
+  box-shadow: var(--shadow-lg);
+  z-index: 50;
+  margin-top: 0.25rem;
+  padding: 0.25rem 0;
+  display: none;
+  max-height: 220px;
+  overflow-y: auto;
+}
+.select.open .select-content {
+  display: block;
+}
+.select-group {
+  padding: 0.25rem 0;
+}
+.select-label {
+  display: block;
+  padding: 0.25rem 1rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+.select-item {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  color: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  border-radius: var(--spacing-1);
+}
+.select-item:hover, .select-item.selected {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}

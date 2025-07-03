@@ -1,0 +1,49 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  min-width: 1.5rem;
+  padding: 0 0.625em;
+  border-radius: var(--spacing-2);
+  background: var(--primary, #18181b);
+  color: var(--primary-foreground, #fff);
+  font-size: 0.81rem;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  vertical-align: middle;
+  box-sizing: border-box;
+  user-select: none;
+  gap: 0.35em;
+}
+.badge-secondary {
+  background: var(--secondary, #f4f4f5);
+  color: var(--secondary-foreground, #18181b);
+}
+.badge-destructive {
+  background: var(--destructive, #ef4444);
+  color: #fff;
+}
+.badge-outline {
+  background: transparent;
+  color: var(--foreground, #18181b);
+  border: 1px solid var(--input, #e4e4e7);
+}
+.badge.rounded-full {
+  border-radius: 9999px;
+}
+.badge.bg-blue {
+  background: #3b82f6;
+  color: #fff;
+}
+.badge.bg-blue-dark {
+  background: #2563eb;
+  color: #fff;
+}
+.badge.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  font-variant-numeric: tabular-nums;
+}

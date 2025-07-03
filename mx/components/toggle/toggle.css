@@ -1,0 +1,50 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--spacing-2);
+  border: 1px solid var(--input);
+  background: transparent;
+  color: var(--foreground);
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  cursor: pointer;
+  height: 2.25rem;
+  min-width: 2.25rem;
+  padding: 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+  user-select: none;
+  gap: 0.5rem;
+}
+.toggle:hover:not(:disabled) {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+  border-color: var(--accent);
+}
+.toggle[aria-pressed="true"], .toggle.active {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+  border-color: var(--accent);
+}
+.toggle:focus-visible {
+  border-color: var(--ring);
+  box-shadow: 0 0 0 2px var(--ring);
+}
+.toggle:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.toggle-sm {
+  height: 1.75rem;
+  min-width: 1.75rem;
+  font-size: 0.875rem;
+  padding: 0 0.5rem;
+}
+.toggle-lg {
+  height: 2.75rem;
+  min-width: 2.75rem;
+  font-size: 1.125rem;
+  padding: 0 1rem;
+}

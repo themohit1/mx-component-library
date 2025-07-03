@@ -1,0 +1,140 @@
+/* Pagination */
+.pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.pagination-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pagination-pages {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pagination-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.25rem;
+  height: 2.25rem;
+  padding: 0 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--foreground);
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.pagination-item:not(.pagination-item-active):hover {
+  background-color: var(--muted);
+}
+
+.pagination-item:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.pagination-item-active {
+  background-color: var(--muted);
+  border-color: var(--border);
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.pagination-item-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.pagination-ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.25rem;
+  width: 2.25rem;
+  padding: 0 0.5rem;
+  color: var(--muted-foreground);
+  user-select: none;
+}
+
+.pagination-prev,
+.pagination-next {
+  padding: 0.5rem;
+  min-width: auto;
+}
+
+.pagination-prev {
+  margin-right: 0.5rem;
+}
+
+.pagination-next {
+  margin-left: 0.5rem;
+}
+
+.pagination-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Pagination with text */
+.pagination-with-text .pagination-item {
+  min-width: auto;
+  padding: 0.5rem 1rem;
+}
+
+/* Pagination sizes */
+.pagination-sm .pagination-item {
+  height: 1.75rem;
+  min-width: 1.75rem;
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+}
+
+.pagination-sm .pagination-ellipsis {
+  height: 1.75rem;
+  width: 1.75rem;
+}
+
+.pagination-sm .pagination-prev,
+.pagination-sm .pagination-next {
+  padding: 0.25rem;
+}
+
+.pagination-lg .pagination-item {
+  height: 2.75rem;
+  min-width: 2.75rem;
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+
+.pagination-lg .pagination-ellipsis {
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.pagination-lg .pagination-prev,
+.pagination-lg .pagination-next {
+  padding: 0.625rem;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .pagination-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

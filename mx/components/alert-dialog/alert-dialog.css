@@ -1,0 +1,65 @@
+.alert-dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 50;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s cubic-bezier(0.87,0,0.13,1);
+}
+.alert-dialog.open .alert-dialog-backdrop {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.alert-dialog-content {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 51;
+  min-width: 340px;
+  max-width: 90vw;
+  width: 400px;
+  background: var(--background);
+  border-radius: var(--spacing-3);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,.17);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  transform: translate(-50%, -48%) scale(0.98);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s cubic-bezier(0.87,0,0.13,1), transform 0.18s cubic-bezier(0.87,0,0.13,1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.alert-dialog.open .alert-dialog-content {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.alert-dialog-header {
+  margin-bottom: 0.25rem;
+}
+.alert-dialog-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+.alert-dialog-description {
+  color: var(--muted-foreground, #71717a);
+  font-size: 0.97rem;
+}
+.alert-dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+@media (max-width: 500px) {
+  .alert-dialog-content {
+    width: 98vw;
+    min-width: 0;
+    padding: 1.25rem 0.5rem 1rem 0.5rem;
+  }
+}

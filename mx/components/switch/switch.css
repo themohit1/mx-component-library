@@ -1,0 +1,124 @@
+/* Switch */
+.switch {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hide the default checkbox */
+.switch-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Switch track */
+.switch-track {
+  width: 44px;
+  height: 24px;
+  background-color: var(--muted);
+  border-radius: 12px;
+  position: relative;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+}
+
+/* Switch thumb */
+.switch-thumb {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: var(--foreground);
+  border-radius: 50%;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.1);
+}
+
+/* Thumb color when checked */
+.switch-input:checked + .switch-track .switch-thumb {
+  background-color: var(--primary-foreground);
+  transform: translateX(20px);
+}
+
+/* Checked state */
+.switch-input:checked + .switch-track {
+  background-color: var(--primary);
+}
+
+/* Focus state */
+.switch-input:focus-visible + .switch-track {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Disabled state */
+.switch-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Size variants */
+.switch-sm .switch-track {
+  width: 36px;
+  height: 20px;
+}
+
+.switch-sm .switch-thumb {
+  width: 16px;
+  height: 16px;
+}
+
+.switch-sm .switch-input:checked + .switch-track .switch-thumb {
+  transform: translateX(16px);
+}
+
+.switch-lg .switch-track {
+  width: 52px;
+  height: 28px;
+  border-radius: 14px;
+}
+
+.switch-lg .switch-thumb {
+  width: 24px;
+  height: 24px;
+}
+
+.switch-lg .switch-input:checked + .switch-track .switch-thumb {
+  transform: translateX(24px);
+}
+
+/* With label */
+.switch-label {
+  margin-left: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--foreground);
+}
+
+/* For RTL support */
+[dir='rtl'] .switch-thumb {
+  transform: translateX(0);
+}
+
+[dir='rtl'] .switch-input:checked + .switch-track .switch-thumb {
+  transform: translateX(-20px);
+}
+
+[dir='rtl'].switch-sm .switch-input:checked + .switch-track .switch-thumb {
+  transform: translateX(-16px);
+}
+
+[dir='rtl'].switch-lg .switch-input:checked + .switch-track .switch-thumb {
+  transform: translateX(-24px);
+}
