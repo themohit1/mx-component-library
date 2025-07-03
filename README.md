@@ -15,8 +15,8 @@ MX UI Components is a lightweight, framework-agnostic UI component library built
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/mah-ui-components.git
-   cd mx-ui-components
+   git clone https://github.com/themohit1/mx-ui-components-library.git
+   cd mx-ui-components-library
    ```
 
 2. Include the necessary files in your HTML:
